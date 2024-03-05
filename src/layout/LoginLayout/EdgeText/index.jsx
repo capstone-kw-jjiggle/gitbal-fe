@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 export default function EdgeText({ rotate }) {
 	return (
 		<div className="flex w-1/6 items-center justify-center">
@@ -7,7 +5,3 @@ export default function EdgeText({ rotate }) {
 		</div>
 	);
 }
-
-EdgeText.propTypes = {
-	rotate: PropTypes.string.isRequired,
-};
