@@ -1,3 +1,9 @@
+import logo from '../../../assets/images/logo/logoKO.svg';
+
 export default function Header() {
-  return <header>헤더</header>;
+	return (
+		<header className=" h-18 flex flex-row items-center justify-start bg-white ">
+			<img alt="logo" src={logo} className="flex h-16 w-32" />
+		</header>
+	);
 }
