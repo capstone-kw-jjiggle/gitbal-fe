@@ -1,3 +1,12 @@
+import Divider from '../../components/Divider';
+import MainContainer from '../../components/MainContainer';
+
 export default function MyPage() {
-  return <div>마이페이지</div>;
+	return (
+		<>
+			<MainContainer>mypage</MainContainer>
+			<Divider />
+			<MainContainer>mypage</MainContainer>
+		</>
+	);
 }

@@ -1,11 +1,12 @@
 import Divider from '../../components/Divider';
 import MainContainer from '../../components/MainContainer';
 
-export default function MainPage() {
+export default function AboutPage() {
 	return (
 		<>
-			<MainContainer>Main</MainContainer>
-			<MainContainer>Main</MainContainer>
+			<MainContainer>About</MainContainer>
+			<Divider />
+			<MainContainer>About</MainContainer>
 		</>
 	);
 }
