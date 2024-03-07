@@ -11,11 +11,7 @@ export default function MainLayout() {
 					<Header />
 				</div>
 			</div>
-			<div className="mx-auto flex  w-4/6 flex-grow flex-col">
-				<div className="flex  flex-grow flex-col">
-					<Outlet />
-				</div>
-			</div>
+			<Outlet />
 			<div className=" relative  mt-16 w-screen bg-greyD9">
 				<div className=" container mx-auto w-4/6">
 					<Footer />

@@ -1,3 +1,3 @@
 export default function Divider() {
-	return <div>디바이더</div>;
+	return <hr className="w-screen border-b-2 border-greyBD" />;
 }

@@ -1,3 +1,12 @@
+import Divider from '../../components/Divider';
+import MainContainer from '../../components/MainContainer';
+
 export default function SchoolPage() {
-  return <div>학교 페이지</div>;
+	return (
+		<>
+			<MainContainer>school</MainContainer>
+			<Divider />
+			<MainContainer>school</MainContainer>
+		</>
+	);
 }
