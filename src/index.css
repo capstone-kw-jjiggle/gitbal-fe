@@ -2,11 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 @font-face {
-	font-family: 'NanumSquareNeo_R';
-	font-weight: normal;
+	font-family: 'NanumSquareNeo';
+	font-weight: 400;
 	src: url('./assets/fonts/NanumSquareNeo_R.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'NanumSquareNeo';
+	font-weight: 700;
+	src: url('./assets/fonts/NanumSquareNeo_B.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	font-weight: 800;
+	src: url('./assets/fonts/NanumSquareNeo_EB.ttf') format('truetype');
 }
 
 body {
-	font-family: 'NanumSquareNeo_R';
+	font-family: 'NanumSquareNeo';
 }
