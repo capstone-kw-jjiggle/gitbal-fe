@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+	font-family: 'NanumSquareNeo_R';
+	font-weight: normal;
+	src: url('./assets/fonts/NanumSquareNeo_R.ttf') format('truetype');
+}
+
+body {
+	font-family: 'NanumSquareNeo_R';
+}
