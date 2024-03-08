@@ -20,7 +20,7 @@ export default function LoginPage() {
 				</button>
 			</div>
 			<div className=" my-auto flex w-1/4 ">
-				<img className="mx-auto " src={logo} />
+				<img className="mx-auto " src={logo} alt="logo" />
 			</div>
 		</div>
 	);
