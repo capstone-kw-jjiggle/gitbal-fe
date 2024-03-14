@@ -10,6 +10,7 @@ export default {
 				greyBD: '#bdbdbd',
 				grey69: '#696969',
 				greyD9: '#d9d9d9',
+				greyF5: '#F5F5F5',
 			},
 			// fontSize: {
 			//   '15px': '15px',
