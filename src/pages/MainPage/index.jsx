@@ -1,5 +1,6 @@
 import MainContainer from '../../components/MainContainer';
 import logo from '../../assets/images/userLevel/userLevel3.svg';
+import Table from './Table';
 
 export default function MainPage() {
 	return (
@@ -68,36 +69,7 @@ export default function MainPage() {
 			<br />
 			<MainContainer>
 				<div className="flex flex-col items-center justify-start">
-					<table className="mx-auto w-4/5 border-collapse border border-greyD9 text-lg font-light">
-						<thead className="h-14 ">
-							<tr className="border border-b-gray-500 font-thin">
-								<th className="font-normal">순위</th>
-								<th className="font-normal">아이디</th>
-								<th className="font-normal">깃발</th>
-								<th className="font-normal">점수</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr className="h-14 border border-greyD9 text-center text-lg hover:bg-gray-100">
-								<td>1</td>
-								<td>suwonthugger</td>
-								<td>🇰🇷</td>
-								<td>95</td>
-							</tr>
-							<tr className="h-14 border border-greyD9 text-center text-lg hover:bg-gray-100">
-								<td>1</td>
-								<td>User1</td>
-								<td>🇰🇷</td>
-								<td>95</td>
-							</tr>
-							<tr className="h-14 border border-greyD9 text-center text-lg hover:bg-gray-100">
-								<td>1</td>
-								<td>User1</td>
-								<td>🇰🇷</td>
-								<td>95</td>
-							</tr>
-						</tbody>
-					</table>
+					<Table />
 				</div>
 			</MainContainer>
 		</>
