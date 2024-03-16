@@ -7,8 +7,13 @@ export default function SchoolSettingPage() {
 	const [key, setKey] = useState('');
 	const [agree, setAgree] = useState(false); // 체크박스 상태 추가
 
-	// 모든 필드가 채워졌는지 확인하는 함수
-	const isFormValid = () => {
+	const isEmailFormValid = () => {
+		// 이메일 관련 필드가 채워졌는지 확인하는 함수
+		return email.trim() !== '' && agree;
+	};
+
+	const isAllFormValid = () => {
+		// 모든 필드가 채워졌는지 확인하는 함수
 		return email.trim() !== '' && key.trim() !== '' && agree;
 	};
 
@@ -18,7 +23,7 @@ export default function SchoolSettingPage() {
 	}
 
 	function handleInputValueKey(event) {
-		setKey(event.target.value);
+		setKey(event.target.value.slice(0, 4)); //4자리 제한 일단은...
 		console.log(key);
 	}
 
@@ -34,12 +39,7 @@ export default function SchoolSettingPage() {
 			</p>
 			<form className="mx-auto flex w-10/12 flex-col items-center">
 				<DropdownMenu />
-				<Input
-					placeholder={'대학 이메일'}
-					type={'email'}
-					value={email}
-					onChange={handleInputValueEmail} // 값 변경 시 setEmail 호출이 안됨...ㅜㅜ
-				/>
+				<Input placeholder={'대학 이메일'} type={'email'} value={email} onChange={handleInputValueEmail} />
 				<div className="flex-start mt-2 flex">
 					<input
 						type="checkbox"
@@ -49,20 +49,23 @@ export default function SchoolSettingPage() {
 					/>
 					<p className="flex text-sm">*서비스 제공을 목적으로 개인정보 수집 및 이용(필수)에 동의합니다.</p>
 				</div>
-				<button className="mb-2 mt-2 h-11 w-36 rounded bg-primary text-sm font-bold text-white">
+				<button
+					className={`mt-6 h-11 w-36 rounded bg-primary text-sm font-bold text-white ${
+						isEmailFormValid() ? '' : 'pointer-events-none opacity-50' // 모든 필드가 채워졌을 때 버튼 활성화
+					}`}>
 					<p className="">인증번호 전송</p>
 				</button>
 				<Input
-					className=" i"
 					placeholder={'인증번호 입력'}
 					type={'number'}
 					value={key}
+					maxLength={4}
 					onChange={handleInputValueKey} // 값 변경 시 setKey 호출
 				/>
 
 				<button
 					className={`mt-6 h-11 w-36 rounded bg-primary text-sm font-bold text-white ${
-						isFormValid() ? '' : 'pointer-events-none opacity-50' // 모든 필드가 채워졌을 때 버튼 활성화
+						isAllFormValid() ? '' : 'pointer-events-none opacity-50' // 모든 필드가 채워졌을 때 버튼 활성화
 					}`}>
 					다음
 				</button>
