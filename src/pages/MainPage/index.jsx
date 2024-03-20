@@ -1,6 +1,7 @@
 import MainContainer from '../../components/MainContainer';
 import logo from '../../assets/images/userLevel/userLevel3.svg';
 import Table from './Table';
+import Pagination from './Pagination';
 
 export default function MainPage() {
 	return (
@@ -57,19 +58,16 @@ export default function MainPage() {
 					<div className="mt-4">
 						<div className="flex flex-col items-center justify-start">
 							<input
-								className="h-16 w-6/12 rounded-xl border border-greyD9 p-4 text-lg shadow-lg"
+								className="h-16 w-6/12 rounded-xl border border-greyD9 p-4 text-lg shadow-md"
 								type="text"
 								placeholder="github ID"
 							/>
 						</div>
 					</div>
 				</div>
-			</MainContainer>
-			<br />
-			<br />
-			<MainContainer>
-				<div className="flex flex-col items-center justify-start">
+				<div className="mt-20 flex flex-col items-center justify-start">
 					<Table />
+					<Pagination />
 				</div>
 			</MainContainer>
 		</>
