@@ -2,8 +2,12 @@ import MainContainer from '../../components/MainContainer';
 import logo from '../../assets/images/userLevel/userLevel3.svg';
 import Table from './Table';
 import Pagination from './Pagination';
+import { useNavigate } from 'react-router-dom';
+import { routes } from '@/constants/routes';
 
 export default function MainPage() {
+	const navigate = useNavigate();
+
 	return (
 		<>
 			<MainContainer>
@@ -39,10 +43,18 @@ export default function MainPage() {
 										<p>우리 학교, 우리 지역 깃허브 순위는 ?</p>
 									</div>
 									<div className="mt-3 flex items-center justify-center">
-										<button className="h-8 w-32 rounded bg-primary text-sm font-bold text-white shadow-lg">
+										<button
+											onClick={() => {
+												navigate(routes.school);
+											}}
+											className="h-8 w-32 rounded bg-primary text-sm font-bold text-white shadow-lg">
 											학교 순위
 										</button>
-										<button className="ml-2 h-8 w-32 rounded bg-primary text-sm font-bold text-white shadow-lg">
+										<button
+											onClick={() => {
+												navigate(routes.region);
+											}}
+											className="ml-2 h-8 w-32 rounded bg-primary text-sm font-bold text-white shadow-lg">
 											지역 순위
 										</button>
 									</div>
