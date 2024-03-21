@@ -12,8 +12,8 @@ export default function MainPage() {
 		<>
 			<MainContainer>
 				<div className="mt-16 flex w-full flex-col">
-					<div className="mx-auto flex w-3/5 flex-row">
-						<div className="flex w-1/2 flex-col items-center justify-start ">
+					<div className="mx-auto flex w-full flex-row justify-center">
+						<div className="flex flex-col items-center justify-start">
 							<div>
 								<img src={logo} className="h-48 w-48" />
 							</div>
@@ -28,7 +28,7 @@ export default function MainPage() {
 								</div>
 							</div>
 						</div>
-						<div className="flex w-1/2 flex-row items-start justify-center ">
+						<div className="ml-24 flex flex-row">
 							<div className="flex flex-col items-start justify-start">
 								<div className=" flex flex-col text-7xl font-bold">
 									<h1 className=" text-primary">
