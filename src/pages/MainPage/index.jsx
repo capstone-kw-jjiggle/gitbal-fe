@@ -17,24 +17,24 @@ export default function MainPage() {
 							<div>
 								<img src={logo} className="h-48 w-48" />
 							</div>
-							<div className="mt-10 flex flex-col ">
+							<div className="mt-11 flex flex-col ">
 								<div className="flex flex-row text-lg">
 									<p className="font-light">학교 1위</p>
-									<p className="ml-10 font-medium">광운대학교</p>
+									<p className="ml-10 font-semibold">광운대학교</p>
 								</div>
 								<div className="mt-3 flex flex-row text-lg">
 									<p className="font-light">지역 1위</p>
-									<p className="ml-10 font-medium">경상도</p>
+									<p className="ml-10 font-semibold">경상도</p>
 								</div>
 							</div>
 						</div>
 						<div className="ml-24 flex flex-row">
 							<div className="flex flex-col items-start justify-start">
-								<div className=" flex flex-col text-7xl font-bold">
+								<div className="flex flex-col text-7xl font-extrabold">
 									<h1 className=" text-primary">
 										<span className="text-black19">깃</span>허브에서
 									</h1>
-									<h1 className="mt-8 text-primary">
+									<h1 className="ml-1 mt-8 text-primary">
 										<span className="text-black19">발</span>로 뛰자
 									</h1>
 								</div>
@@ -42,7 +42,7 @@ export default function MainPage() {
 									<div className="text-lg font-normal text-primary">
 										<p>우리 학교, 우리 지역 깃허브 순위는 ?</p>
 									</div>
-									<div className="mt-3 flex items-center justify-center">
+									<div className="mt-3 flex items-center justify-start">
 										<button
 											onClick={() => {
 												navigate(routes.school);
