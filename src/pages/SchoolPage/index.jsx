@@ -3,6 +3,7 @@ import MainContainer from '../../components/MainContainer';
 import ProfileImage from '../../components/ProfileImage';
 import levelImage from '../../assets/images/userLevel/userLevel3.svg';
 import levelImage6 from '../../assets/images/userLevel/userLevel6.svg';
+import Pagination from './Pagination';
 
 export default function SchoolPage() {
 	return (
@@ -77,6 +78,17 @@ export default function SchoolPage() {
 			</MainContainer>
 			<Divider />
 			<MainContainer>
+				<div className="mx-auto mt-8 flex w-11/12 items-center justify-between ">
+					<Pagination />
+					<div className="w-1/3">
+						<input
+							className="h-12 w-full rounded-lg border-2 border-greyD9 px-4 py-2 text-sm"
+							type="text"
+							placeholder="github ID"
+						/>
+					</div>
+				</div>
+
 				<div className="mx-auto mb-3 mt-8 flex w-11/12 items-center justify-between rounded-2xl border border-gray-200 px-12 py-3 text-black19 shadow-lg">
 					<p className="text-2xl font-extrabold">1위</p>
 					<div className="flex w-1/2 ">
