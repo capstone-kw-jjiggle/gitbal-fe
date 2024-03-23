@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import Select from 'react-select';
 
-export default function DropdownSelect() {
+export default function DropdownSelect({ placeholder, onSelectChange }) {
 	const [value, setValue] = useState('');
-	console.log(value);
+
+	const handleSelectOption = (selectedOption) => {
+		onSelectChange(selectedOption);
+	};
 
 	const customStyles = {
 		control: (baseStyles, state) => ({
@@ -23,9 +26,7 @@ export default function DropdownSelect() {
 		},
 		menu: (provided, state) => ({
 			...provided,
-			backgroundColor: 'white', // 드롭다운 메뉴의 배경색을 노란색으로 변경
-			// '&:hover': { backgroundColor: '#696969' },
-			// 기타 원하는 스타일 속성 추가 가능
+			backgroundColor: 'white',
 		}),
 		option: (provided, state) => ({
 			...provided,
@@ -35,45 +36,25 @@ export default function DropdownSelect() {
 			// 선택된 옵션은 파란색, 나머지는 흰색 배경
 			// 기타 원하는 스타일 속성 추가 가능
 			':hover': {
-				backgroundColor: '#90B3F4', // 호버된 옵션은 빨간색으로 변경
+				backgroundColor: '#90B3F4',
 			},
 		}),
 	};
 
 	const options = [
-		{ label: '선택없음', value: 'noSelect' },
-		{ label: '광운대학교', value: 'kw' },
-		{ label: '서울대학교', value: 'snu' },
-		{ label: '선택없음', value: 'noSelect' },
-		{ label: '광운대학교', value: 'kw' },
-		{ label: '서울대학교', value: 'snu' },
-		{ label: '선택없음', value: 'noSelect' },
-		{ label: '광운대학교', value: 'kw' },
-		{ label: '서울대학교', value: 'snu' },
-		{ label: '선택없음', value: 'noSelect' },
-		{ label: '광운대학교', value: 'kw' },
-		{ label: '서울대학교', value: 'snu' },
-		{ label: '선택없음', value: 'noSelect' },
-		{ label: '광운대학교', value: 'kw' },
-		{ label: '서울대학교', value: 'snu' },
-		{ label: '선택없음', value: 'noSelect' },
-		{ label: '광운대학교', value: 'kw' },
-		{ label: '서울대학교', value: 'snu' },
-		{ label: '선택없음', value: 'noSelect' },
-		{ label: '광운대학교', value: 'kw' },
-		{ label: '서울대학교', value: 'snu' },
-		{ label: '선택없음', value: 'noSelect' },
-		{ label: '광운대학교', value: 'kw' },
-		{ label: '서울대학교', value: 'snu' },
+		{ label: '선택없음', value: '선택없음' },
+		{ label: '광운대학교', value: '광운대학교' },
+		{ label: '서울대학교', value: '서울대학교' },
 	];
 
 	return (
-		<div className=" w-full">
+		<div className=" mt-8 w-full">
 			<Select
+				onChange={handleSelectOption}
 				styles={customStyles}
 				options={options}
 				defaultValue={value}
-				placeholder="클릭하세요"
+				placeholder={placeholder}
 				noOptionsMessage={() => '찾으시는 대학교가 없습니다.'}
 			/>
 		</div>
