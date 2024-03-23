@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Input from './Input';
-import DropdownMenu from './DropdownMenu';
+import DropdownSelect from './DropdownSelect';
 
 export default function SchoolSettingPage() {
 	const [email, setEmail] = useState('');
@@ -37,8 +37,8 @@ export default function SchoolSettingPage() {
 			<p className="text-3xl">
 				지금 <span className="font-bold">소속 대학교</span>를 인증하세요
 			</p>
-			<form className="mx-auto flex w-10/12 flex-col items-center">
-				<DropdownMenu />
+			<form className="mx-auto flex w-11/12 flex-col items-center">
+				<DropdownSelect />
 				<Input placeholder={'대학 이메일'} type={'email'} value={email} onChange={handleInputValueEmail} />
 				<div className="flex-start mt-2 flex">
 					<input
@@ -62,7 +62,6 @@ export default function SchoolSettingPage() {
 					maxLength={4}
 					onChange={handleInputValueKey} // 값 변경 시 setKey 호출
 				/>
-
 				<button
 					className={`mt-6 h-11 w-36 rounded bg-primary text-sm font-bold text-white ${
 						isAllFormValid() ? '' : 'pointer-events-none opacity-50' // 모든 필드가 채워졌을 때 버튼 활성화
