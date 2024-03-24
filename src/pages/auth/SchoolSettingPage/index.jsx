@@ -31,6 +31,7 @@ export default function SchoolSettingPage() {
 
 	const isAllFormValid = () => {
 		// 모든 필드가 채워졌는지 확인하는 함수
+		//if 선택없음이면 활성화
 		return school.trim() && email.trim() !== '' && key.trim() !== '' && agree;
 	};
 
@@ -57,7 +58,7 @@ export default function SchoolSettingPage() {
 			</p>
 			<form className="mx-auto flex w-11/12 flex-col items-center">
 				<DropdownSelect placeholder={'클릭하세요'} onSelectChange={handleSelectValueSchool} />
-				<Input placeholder={'대학 이메일'} type={'email'} value={email} onChange={handleInputValueEmail} />
+				<Input placeholder={'대학 이메일 입력'} type={'email'} value={email} onChange={handleInputValueEmail} />
 				<div className="flex-start mt-5 flex">
 					<input
 						type="checkbox"

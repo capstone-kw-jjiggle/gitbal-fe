@@ -24,19 +24,20 @@ export default function DropdownSelect({ placeholder, onSelectChange }) {
 				color: '#A4ABB5',
 			};
 		},
-		menu: (provided, state) => ({
-			...provided,
+		menu: (baseStyles, state) => ({
+			...baseStyles,
 			backgroundColor: 'white',
 		}),
-		option: (provided, state) => ({
-			...provided,
+		option: (baseStyles, state) => ({
+			...baseStyles,
 			'backgroundColor': state.isSelected ? '#1368E8' : 'white',
 			'border': '0.01rem solid #bdbdbd',
 			'height': '100%',
 			// 선택된 옵션은 파란색, 나머지는 흰색 배경
 			// 기타 원하는 스타일 속성 추가 가능
 			':hover': {
-				backgroundColor: '#90B3F4',
+				backgroundColor: '#E7EFFC',
+				color: 'black',
 			},
 		}),
 	};
