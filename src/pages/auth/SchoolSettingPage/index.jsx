@@ -33,7 +33,11 @@ export default function SchoolSettingPage() {
 	const isAllFormValid = () => {
 		// 모든 필드가 채워졌는지 확인하는 함수
 		//if 선택없음이면 활성화
-		return school.trim() && email.trim() !== '' && key.trim() !== '' && agree;
+		if (school.trim() && email.trim() !== '' && key.trim() !== '' && agree) {
+			return true;
+		} else if (school === '선택없음' && agree) {
+			return true;
+		}
 	};
 
 	function handleSelectValueSchool(event) {
