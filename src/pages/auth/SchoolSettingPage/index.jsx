@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Input from './Input';
-import DropdownSelect from './DropdownSelect';
+import MyDropdownSelect from '../../../components/MyDropdownSelect';
+import { options } from './_data/mock';
 
 export default function SchoolSettingPage() {
 	const [school, setSchool] = useState('');
@@ -57,7 +58,7 @@ export default function SchoolSettingPage() {
 				지금 <span className="font-bold">소속 대학교</span>를 인증하세요
 			</p>
 			<form className="mx-auto flex w-11/12 flex-col items-center">
-				<DropdownSelect placeholder={'클릭하세요'} onSelectChange={handleSelectValueSchool} />
+				<MyDropdownSelect placeholder={'클릭하세요'} onSelectChange={handleSelectValueSchool} optionsData={options} />
 				<Input placeholder={'대학 이메일 입력'} type={'email'} value={email} onChange={handleInputValueEmail} />
 				<div className="flex-start mt-5 flex">
 					<input

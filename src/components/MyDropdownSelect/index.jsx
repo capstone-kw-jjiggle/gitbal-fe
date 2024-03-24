@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Select from 'react-select';
 
-export default function DropdownSelect({ placeholder, onSelectChange }) {
+export default function MyDropdownSelect({ placeholder, onSelectChange, optionsData }) {
 	const [value, setValue] = useState('');
 
 	const handleSelectOption = (selectedOption) => {
@@ -42,18 +42,12 @@ export default function DropdownSelect({ placeholder, onSelectChange }) {
 		}),
 	};
 
-	const options = [
-		{ label: '선택없음', value: '선택없음' },
-		{ label: '광운대학교', value: '광운대학교' },
-		{ label: '서울대학교', value: '서울대학교' },
-	];
-
 	return (
 		<div className=" mt-8 w-full">
 			<Select
 				onChange={handleSelectOption}
 				styles={customStyles}
-				options={options}
+				options={optionsData}
 				defaultValue={value}
 				placeholder={placeholder}
 				noOptionsMessage={() => '찾으시는 대학교가 없습니다.'}
