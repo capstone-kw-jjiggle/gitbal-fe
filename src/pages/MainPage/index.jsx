@@ -69,9 +69,9 @@ export default function MainPage() {
 						</div>
 					</div>
 					<div className="mt-4">
-						<div className="flex flex-col items-center justify-start">
+						<div className="mx-auto flex flex-col items-center justify-start">
 							<input
-								className="h-16 w-6/12 rounded-xl border border-greyD9 p-4 text-lg shadow-md"
+								className="h-16 w-7/12 rounded-xl border border-greyD9 p-4 text-lg shadow-md"
 								type="text"
 								placeholder="github ID"
 							/>
