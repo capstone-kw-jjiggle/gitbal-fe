@@ -1,9 +1,9 @@
 import MainContainer from '../../components/MainContainer';
 import logo from '../../assets/images/userLevel/userLevel3.svg';
-import Table from './Table';
 import Pagination from './Pagination';
 import { useNavigate } from 'react-router-dom';
 import { routes } from '@/constants/routes';
+import UserRankList from './UserRankList';
 
 export default function MainPage() {
 	const navigate = useNavigate();
@@ -78,7 +78,7 @@ export default function MainPage() {
 					</div>
 				</div>
 				<div className="mt-20 flex flex-col items-center justify-start">
-					<Table />
+					<UserRankList />
 					<Pagination />
 				</div>
 			</MainContainer>

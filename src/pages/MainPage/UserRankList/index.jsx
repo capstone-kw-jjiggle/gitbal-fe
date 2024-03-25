@@ -1,6 +1,6 @@
-import TableItemGroup from './TableItemGroup';
+import UserRankItemGroup from './UserRankItemGroup';
 
-export default function Table() {
+export default function UserRankList() {
 	return (
 		<table className="mx-auto w-4/5 border-collapse border border-greyD9 text-lg font-light">
 			<thead className="h-14 ">
@@ -11,7 +11,7 @@ export default function Table() {
 					<th className="font-normal">점수</th>
 				</tr>
 			</thead>
-			<TableItemGroup />
+			<UserRankItemGroup />
 		</table>
 	);
 }
