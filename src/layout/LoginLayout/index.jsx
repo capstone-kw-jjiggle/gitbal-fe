@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
-import Header from './Header';
-import Footer from './Footer';
-import EdgeText from './EdgeText';
+import Header from '@/layout/LoginLayout/Header';
+import Footer from '@/layout/LoginLayout/Footer';
+import EdgeText from '@/layout/LoginLayout/EdgeText';
 
 export default function LoginLayout() {
 	return (

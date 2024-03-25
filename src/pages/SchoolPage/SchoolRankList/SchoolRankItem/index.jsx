@@ -1,9 +1,9 @@
-import level1 from '../../../../assets/images/userLevel/userLevel1.svg';
-import level2 from '../../../../assets/images/userLevel/userLevel2.svg';
-import level3 from '../../../../assets/images/userLevel/userLevel3.svg';
-import level4 from '../../../../assets/images/userLevel/userLevel4.svg';
-import level5 from '../../../../assets/images/userLevel/userLevel5.svg';
-import level6 from '../../../../assets/images/userLevel/userLevel6.svg';
+import level1 from '@/assets/images/userLevel/userLevel1.svg';
+import level2 from '@/assets/images/userLevel/userLevel2.svg';
+import level3 from '@/assets/images/userLevel/userLevel3.svg';
+import level4 from '@/assets/images/userLevel/userLevel4.svg';
+import level5 from '@/assets/images/userLevel/userLevel5.svg';
+import level6 from '@/assets/images/userLevel/userLevel6.svg';
 
 export default function SchoolRankItem({ rank, schoolName, score, mvpId, scoreIncrease, level }) {
 	let imageUrl;

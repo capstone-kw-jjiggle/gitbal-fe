@@ -1,11 +1,10 @@
-import Divider from '../../components/Divider';
-import MainContainer from '../../components/MainContainer';
-import ProfileImage from '../../components/ProfileImage';
-import levelImage from '../../assets/images/userLevel/userLevel3.svg';
-import levelImage6 from '../../assets/images/userLevel/userLevel6.svg';
-import Pagination from './Pagination';
-import SchoolRankItem from './SchoolRankList/SchoolRankItem';
-import SchoolRankList from './SchoolRankList';
+import Divider from '@components/Divider';
+import MainContainer from '@components/MainContainer';
+import ProfileImage from '@components/ProfileImage';
+import levelImage from '@/assets/images/userLevel/userLevel3.svg';
+import levelImage6 from '@/assets/images/userLevel/userLevel6.svg';
+import Pagination from '@/pages/SchoolPage/Pagination';
+import SchoolRankList from '@/pages/SchoolPage/SchoolRankList';
 
 export default function SchoolPage() {
 	return (

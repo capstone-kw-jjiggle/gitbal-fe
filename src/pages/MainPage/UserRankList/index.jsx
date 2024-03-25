@@ -1,4 +1,4 @@
-import UserRankItemGroup from './UserRankItemGroup';
+import UserRankItemGroup from '@/pages/MainPage/UserRankList/UserRankItemGroup';
 
 export default function UserRankList() {
 	return (

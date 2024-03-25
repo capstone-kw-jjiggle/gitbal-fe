@@ -1,9 +1,10 @@
-import MainContainer from '../../components/MainContainer';
-import logo from '../../assets/images/userLevel/userLevel3.svg';
-import Pagination from './Pagination';
 import { useNavigate } from 'react-router-dom';
 import { routes } from '@/constants/routes';
-import UserRankList from './UserRankList';
+
+import UserRankList from '@/pages/MainPage/UserRankList';
+import Pagination from '@/pages/MainPage/Pagination';
+import MainContainer from '@components/MainContainer';
+import logo from '@/assets/images/userLevel/userLevel3.svg';
 
 export default function MainPage() {
 	const navigate = useNavigate();

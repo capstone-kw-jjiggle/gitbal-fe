@@ -1,5 +1,5 @@
-import SchoolRankItem from './SchoolRankItem';
-import { schoolRankData } from './_data/mock';
+import SchoolRankItem from '@/pages/SchoolPage/SchoolRankList/SchoolRankItem';
+import { schoolRankData } from '@/pages/SchoolPage/SchoolRankList/_data/mock';
 
 export default function SchoolRankList() {
 	return (

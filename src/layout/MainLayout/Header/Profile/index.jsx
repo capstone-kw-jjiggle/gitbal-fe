@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import image from '../../../../assets/react.svg';
+import image from '@/assets/react.svg';
 
 export default function Profile() {
 	return (
