@@ -3,7 +3,7 @@ import navItems from '../../../../nav-items';
 
 export default function Navigation() {
 	return (
-		<nav className="flex flex-row">
+		<nav >
 			<NavGroup items={navItems.items} />
 		</nav>
 	);
