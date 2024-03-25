@@ -22,11 +22,16 @@ export default function Pagination() {
 
 	return (
 		<ul className="flex">
-			{currentSet > 1 && (
-				<PageNavigationButton onNavigatePage={setCurrentSet} isLeft={true}>
-					{'<'}
-				</PageNavigationButton>
-			)}
+			<PageNavigationButton onNavigatePage={() => setCurrentSet(1)} currentSet={currentSet} maxSet={maxSet}>
+				{'<<'}
+			</PageNavigationButton>
+			<PageNavigationButton
+				onNavigatePage={() => currentSet > 1 && setCurrentSet((prev) => prev - 1)}
+				currentSet={currentSet}
+				maxSet={maxSet}>
+				{'<'}
+			</PageNavigationButton>
+
 			{pageNumbers.map((number) => (
 				<PageNumber
 					key={number}
@@ -37,11 +42,16 @@ export default function Pagination() {
 					{number}
 				</PageNumber>
 			))}
-			{currentSet < maxSet && (
-				<PageNavigationButton onNavigatePage={setCurrentSet} isLeft={false}>
-					{'>'}
-				</PageNavigationButton>
-			)}
+
+			<PageNavigationButton
+				onNavigatePage={() => currentSet < maxSet && setCurrentSet((prev) => prev + 1)}
+				currentSet={currentSet}
+				maxSet={maxSet}>
+				{'>'}
+			</PageNavigationButton>
+			<PageNavigationButton onNavigatePage={() => setCurrentSet(maxSet)} currentSet={currentSet} maxSet={maxSet}>
+				{'>>'}
+			</PageNavigationButton>
 		</ul>
 	);
 }
