@@ -1,4 +1,4 @@
-import NavItem from './NavItem';
+import NavItem from '@/layout/MainLayout/Header/Navigation/NavItem';
 
 export default function NavGroup({ items }) {
 	return (

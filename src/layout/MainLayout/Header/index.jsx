@@ -1,7 +1,6 @@
-import logo from '../../../assets/images/logo/logoEN.svg';
-import Logo from '../../../components/Logo/Logo';
-import Navigation from './Navigation';
-import Profile from './Profile';
+import Logo from '@components/Logo/Logo';
+import Navigation from '@/layout/MainLayout/Header/Navigation';
+import Profile from '@/layout/MainLayout/Header/Profile';
 
 export default function Header() {
 	return (

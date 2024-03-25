@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import PageNumber from './PageNumber';
-import PageNavigationButton from './PageNavigationButton';
+import PageNumber from '@/pages/SchoolPage/Pagination/PageNumber';
+import PageNavigationButton from '@/pages/SchoolPage/Pagination/PageNavigationButton';
 
 const pageData = {
 	totalPages: 200,

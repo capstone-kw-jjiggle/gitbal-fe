@@ -5,7 +5,7 @@ import level4 from '@/assets/images/userLevel/userLevel4.svg';
 import level5 from '@/assets/images/userLevel/userLevel5.svg';
 import level6 from '@/assets/images/userLevel/userLevel6.svg';
 
-export default function TableItem({ rank, userId, level, score }) {
+export default function UserRankItem({ rank, userId, level, score }) {
 	let imageUrl;
 
 	switch (level) {
