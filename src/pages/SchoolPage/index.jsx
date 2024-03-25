@@ -10,7 +10,7 @@ export default function SchoolPage() {
 	return (
 		<>
 			<MainContainer>
-				<div className="mx-auto mt-8 flex w-11/12 items-start justify-between text-black19">
+				<div className="mt-8 flex w-full items-start justify-between text-black19">
 					<div className="flex w-1/2 flex-col">
 						<div className="mb-5 flex items-baseline justify-start">
 							<h2 className="text-3xl font-extrabold text-primary">학교 랭킹</h2>
@@ -50,7 +50,7 @@ export default function SchoolPage() {
 						</div>
 					</div>
 				</div>
-				<div className="mx-auto mt-8 flex w-11/12 items-center justify-between rounded-2xl border border-gray-200 px-12 py-6 text-black19 shadow-lg">
+				<div className="mt-8 flex w-full items-center justify-between rounded-2xl border border-gray-200 px-12 py-6 text-black19 shadow-lg">
 					<p className="text-3xl font-extrabold">1위</p>
 					<div className="flex w-1/2 ">
 						<div className="mt-6 flex w-full flex-col">
@@ -73,13 +73,13 @@ export default function SchoolPage() {
 						<img src={levelImage6} className="ml-2 h-20 w-20" />
 					</div>
 				</div>
-				<div className="mx-auto mb-10 mt-4 flex w-11/12 justify-end text-black19">
+				<div className="mb-10 mt-4 flex w-full justify-end text-black19">
 					<p>시즌4 보상 칭호 맛꿀마수호자 </p>
 				</div>
 			</MainContainer>
 			<Divider />
 			<MainContainer>
-				<div className="mx-auto mt-8 flex w-11/12 items-center justify-between ">
+				<div className="mt-8 flex w-full items-center justify-between ">
 					<Pagination />
 					<div className="w-1/3">
 						<input

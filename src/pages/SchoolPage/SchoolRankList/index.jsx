@@ -3,7 +3,7 @@ import { schoolRankData } from '@/pages/SchoolPage/SchoolRankList/_data/mock';
 
 export default function SchoolRankList() {
 	return (
-		<div className="mx-auto mt-12 flex w-11/12 flex-col gap-4">
+		<div className="mt-12 flex w-full flex-col gap-4">
 			{schoolRankData.map((item) => (
 				<SchoolRankItem
 					key={item.rank}
