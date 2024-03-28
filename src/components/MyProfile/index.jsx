@@ -1,10 +1,10 @@
-import ProfileImage from '@components/ProfileImage';
+import { LargeProfileImage } from '@components/ProfileImage';
 import levelImage from '@/assets/images/userLevel/userLevel3.svg';
 
 export default function MyProfile() {
 	return (
 		<div className="mt-3 flex">
-			<ProfileImage />
+			<LargeProfileImage />
 			<div className="ml-8 flex flex-col justify-center gap-1 text-xl font-extrabold">
 				<p className="font-bold text-primary">&quot;부지런히&quot; + &quot;열일하는&quot;</p>
 				<div className="mt-1 flex">
