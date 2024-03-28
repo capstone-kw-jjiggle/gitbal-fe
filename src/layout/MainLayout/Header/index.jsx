@@ -1,6 +1,6 @@
 import Logo from '@components/Logo/Logo';
 import Navigation from '@/layout/MainLayout/Header/Navigation';
-import Profile from '@/layout/MainLayout/Header/Profile';
+import { SmallProfileImage } from '@/components/ProfileImage/SmallProfileImage';
 
 export default function Header() {
 	return (
@@ -10,7 +10,7 @@ export default function Header() {
 				<Navigation />
 			</div>
 			<div className="flex flex-row items-center justify-start">
-				<Profile />
+				<SmallProfileImage />
 			</div>
 		</header>
 	);
