@@ -6,7 +6,7 @@ export default function RegionRank4th({ rank, regionName, score, scoreIncrease, 
 			<div className=" flex justify-between">
 				<img src={level1} className=" h-12 w-12" />
 				<div className="flex flex-col justify-end text-end">
-					<p className="text-xl font-bold">
+					<p className=" text-lg font-bold">
 						{rank}위 {regionName}
 					</p>
 					<p className=" mt-2 text-sm text-primary">뚱이네집</p>
