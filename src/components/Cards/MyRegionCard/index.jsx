@@ -15,7 +15,7 @@ export const MyRegionCard = ({ imgSrc }) => {
 			<div className="flex items-baseline justify-between text-xl">
 				<div className="flex items-center ">
 					<p className="font-semibold">최대 기여자</p>
-					<p className="ml-16 font-light">jamoong</p>ㄴ
+					<p className="ml-16 font-light">jamoong</p>
 				</div>
 				<p className="text-sm text-green-600">321,312 점 기여</p>
 			</div>
