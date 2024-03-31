@@ -2,7 +2,7 @@ import level2 from './../../../../assets/images/regionLevel/regionLevel2.svg';
 
 export default function RegionRank3rd({ rank, regionName, score, scoreIncrease, mvpId }) {
 	return (
-		<div className="h-full w-full bg-white px-6 py-7 text-black19">
+		<div className="h-full w-full px-6 py-7 text-black19">
 			<div className=" flex justify-between">
 				<img src={level2} className=" h-14 w-14" />
 				<div className="flex flex-col justify-end text-end">
