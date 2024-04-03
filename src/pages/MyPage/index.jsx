@@ -65,6 +65,18 @@ export default function MyPage() {
 						</div>
 					</div>
 				</div>
+				<div className="mt-4 flex w-full items-center rounded-2xl border border-gray-200 px-4 py-4 text-black19 shadow-lg">
+					<div className="flex w-1/2 flex-col">
+						<div className="flex gap-2">
+							<h2 className="text-xl font-extrabold">SCHOOL</h2>
+							<span className="text-xl font-extrabold text-grey69">광운대학교</span>
+						</div>
+						<div className="flex items-center justify-center py-24">
+							<h2 className="text-6xl font-extrabold">{2}등</h2>
+						</div>
+					</div>
+					<div></div>
+				</div>
 			</MainContainer>
 		</>
 	);
