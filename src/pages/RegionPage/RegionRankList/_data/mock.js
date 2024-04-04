@@ -9,4 +9,5 @@ export const regionRankData = [
 	{ rank: 8, regionName: '전라북도', score: 777777777, mvpId: 'suwonthugger', scoreIncrease: 21234, level: 4 },
 	{ rank: 9, regionName: '전라남도', score: 777777777, mvpId: 'suwonthugger', scoreIncrease: 21234, level: 4 },
 	{ rank: 10, regionName: '전라북도', score: 777777777, mvpId: 'suwonthugger', scoreIncrease: 21234, level: 4 },
+	{ rank: 11, regionName: '제주도', score: 777777777, mvpId: 'suwonthugger', scoreIncrease: 21234, level: 5 },
 ];

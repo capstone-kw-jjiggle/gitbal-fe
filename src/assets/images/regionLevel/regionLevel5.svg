@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3519.26 623.38">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: MaplestoryOTFBold-KSCpc-EUC-H, 'Maplestory OTF';
+        font-size: 149.37px;
+        letter-spacing: .08em;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        stroke: #231815;
+        stroke-miterlimit: 10;
+        stroke-width: 15px;
+      }
+
+      .cls-3 {
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="_레이어_1" data-name="레이어 1">
+    <g>
+      <path class="cls-2" d="M3201.15,7.5h-500.54c-84.21,0-295.31,65.58-311.81,148.46l-200.04,80.73,221.01-5.97c38.72,55.53,121.11,94.26,185.82,94.26h757.43c87.67,0,158.74-71.07,158.74-158.74h0c0-87.67-222.94-158.74-310.6-158.74Z"/>
+      <path class="cls-3" d="M2890.17,623.38c.54-56.23-13.04-106.58-243.53-144.19-260.46-42.5-806.37-68.71-1200.39-68.71-326.03,0-905.21,17.95-1146.87,48.21C-9.47,497.38-3.98,556.19,1.42,623.38h2888.75Z"/>
+      <text class="cls-1" transform="translate(2530.63 219.56)"><tspan x="0" y="0">누우면 우리집</tspan></text>
+      <g>
+        <circle class="cls-3" cx="1146.83" cy="310.07" r="108.91"/>
+        <ellipse class="cls-3" cx="1391.73" cy="364.53" rx="181.04" ry="54.46"/>
+        <ellipse class="cls-3" cx="1570.32" cy="337.07" rx="22.55" ry="69.47"/>
+      </g>
+    </g>
+  </g>
+</svg>

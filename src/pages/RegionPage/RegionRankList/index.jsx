@@ -2,6 +2,7 @@ import RegionRank1st from './RegionRank1st';
 import RegionRank2nd from './RegionRank2nd';
 import RegionRank3rd from './RegionRank3rd';
 import RegionRank4th from './RegionRank4th';
+import RegionRank5th from './RegionRank5th';
 import { regionRankData } from './_data/mock';
 
 function regionRankDataProps(data) {
@@ -17,7 +18,7 @@ function regionRankDataProps(data) {
 export default function RegionRankList() {
 	const rankData = [];
 
-	for (let i = 1; i <= 10; i++) {
+	for (let i = 1; i <= 11; i++) {
 		rankData[i] = regionRankData.filter((data) => data.rank === i)[0];
 	}
 
@@ -25,8 +26,8 @@ export default function RegionRankList() {
 		<>
 			<div className="mt-8 ">
 				{/* 1열 */}
-				<div className=" h-56 w-full rounded bg-white shadow-xl">
-					<div key={rankData[1].rank}>
+				<div className=" mt-4 flex h-56 w-full flex-row rounded bg-white shadow-xl">
+					<div key={rankData[1].rank} className="w-full">
 						{/* 다른 필드들도 필요에 맞게 표시 */}
 						<RegionRank1st {...regionRankDataProps(rankData[1])} />
 					</div>
@@ -101,6 +102,14 @@ export default function RegionRankList() {
 							{/* 다른 필드들도 필요에 맞게 표시 */}
 							<RegionRank4th {...regionRankDataProps(rankData[10])} />
 						</div>
+					</div>
+				</div>
+
+				{/* 5열 */}
+				<div className="mt-4 flex h-28 w-full flex-row rounded bg-white shadow-xl">
+					<div key={rankData[11].rank} className="w-full">
+						{/* 다른 필드들도 필요에 맞게 표시 */}
+						<RegionRank5th {...regionRankDataProps(rankData[11])} />
 					</div>
 				</div>
 			</div>
