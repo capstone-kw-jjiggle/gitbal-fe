@@ -22,19 +22,6 @@ export default function RegionRank1st({ rank, regionName, score, scoreIncrease, 
 					MVP <span className=" text-primary">{mvpId}</span>
 				</p>
 			</div>
-
-			{/* <div className=" flex justify-between">
-				<div className="flex flex-col justify-end text-end">
-					<p className=" mt-2 text-lg text-primary">###</p>
-				</div>
-			</div> */}
-			{/* <div className="mt-6 flex flex-row  align-bottom">
-				<p className=" flex pl-2 pt-3 text-xs text-green-500">+{scoreIncrease}점</p>
-			</div> */}
-			{/*  */}
-			{/* <p className=" text-xs">
-				MVP <span className=" text-primary">{mvpId}</span>
-			</p> */}
 		</div>
 	);
 }
