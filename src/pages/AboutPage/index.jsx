@@ -101,7 +101,7 @@ export default function AboutPage() {
 								<p className="my-2">소속된 학교와 지역의 랭킹을 보여드려요.</p>
 								<p className="my-2">가장 큰 기여를 한 사용자에게 MVP를 드립니다.</p>
 								<p className="my-2">나의 학교를, 나의 지역을, 최고의 자리에 오를 수 잇도록</p>
-								<p className="my-2">여려분이 함꼐 해주세요.</p>
+								<p className="my-2">여려분이 함께 해주세요.</p>
 								<p className="my-2">참! 1등을 한 학교와 지역에는 상응하는 칭호를 선물로 드립니다.</p>
 							</div>
 						</div>
