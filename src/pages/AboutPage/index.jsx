@@ -35,10 +35,10 @@ export default function AboutPage() {
 					</div>
 				</div>
 				<div className="mx-auto mb-4 mt-40 flex justify-center text-xl text-grey69">
-					<button className="mx-2" onClick={onMoveToHowtoUse}>
+					<button className="mx-4" onClick={onMoveToHowtoUse}>
 						How to use
 					</button>
-					<button className="mx-2" onClick={onMoveToPeople}>
+					<button className="mx-4" onClick={onMoveToPeople}>
 						People
 					</button>
 				</div>
@@ -53,29 +53,29 @@ export default function AboutPage() {
 						<p className="my-2">중요한건 아는데</p>
 						<p className="my-2">동기가 필요할 때</p>
 					</div>
-					<div className="text-end text-sm">
+					<div className="my-auto text-end text-sm">
 						<p className="my-4">깃발은 이런분들을 위해 만들어졌습니다.</p>
 						<p className="my-4"> 혼자 깃허브 활동을 하는 것이 재미가 없으신 분들</p>
 						<p className="my-4">자신의 개발 실력을 뽐내고 싶으신 분들</p>
 						<p className="my-4">친구들과 함께 우리 학교의 개발 실력을 널리 알리고 싶은 분들</p>
-						<p className="my-4">나의 지역의 코딩 실력이 뛰어남을 알리고 싶으신 분들</p>
+						<p className="my-4">내 지역의 코딩 실력이 뛰어남을 알리고 싶으신 분들</p>
 						<p className="my-4">경쟁을 통해 자신의 실력을 확인하고, 실력 향상을 위해 달리고 싶으신 분들</p>
 					</div>
 				</div>
 
 				<div>
-					<p className="mt-40 text-center text-xl font-bold text-primary">Main Service</p>
+					<p className="mt-80 text-center text-xl font-bold text-primary">Main Service</p>
 					<p className="mt-4 text-center text-4xl font-bold">깃발의 랭킹 시스템을 만나보세요.</p>
 
 					{/* 단락1 */}
 					<div className="mt-20 flex flex-row justify-between">
 						<div>
-							<p className="mb-6 text-xl font-bold text-primary">깃허브 활동 점수화</p>
+							<p className="mb-4 text-xl font-bold text-primary">깃허브 활동 점수화</p>
 							<p className="my-2 text-3xl font-extrabold text-grey69">깃허브 활동의 점수화 </p>
 							<p className="my-2 text-3xl font-extrabold text-grey69">깃발에 맡기고</p>
 							<p className="my-2 text-3xl font-extrabold text-grey69">나의 실력을 확인하세요.</p>
 							<div className="mt-8 text-sm">
-								<p className="my-2">커밋 뿐만 아니라 pr, like 까지 깃허브의 다양한 기능을</p>
+								<p className="my-2">커밋 뿐만 아니라 pr, like 까지 깃허브의 기능을</p>
 								<p className="my-2">지표로 사용해서 사용자의 점수를 분석해요.</p>
 								<p className="my-2">점수에 맞는 엠블렘을 표시해 드립니다.</p>
 								<p className="my-2">내 점수와 비슷한 사용자를 알려드려요.</p>
@@ -93,15 +93,15 @@ export default function AboutPage() {
 							<img src={testImg} alt="testImg" className="rounded-xl shadow-xl" />
 						</div>
 						<div className=" text-end">
-							<p className="mb-6 text-xl font-bold text-primary">랭킹 시스템 운영</p>
+							<p className="mb-4 text-xl font-bold text-primary">랭킹 시스템 운영</p>
 							<p className="my-2 text-3xl font-extrabold text-grey69">학교별, 지역별 랭킹을 </p>
 							<p className="my-2 text-3xl font-extrabold text-grey69">보여드립니다.</p>
 
 							<div className="mt-8 text-sm">
 								<p className="my-2">소속된 학교와 지역의 랭킹을 보여드려요.</p>
 								<p className="my-2">가장 큰 기여를 한 사용자에게 MVP를 드립니다.</p>
-								<p className="my-2">나의 학교를, 나의 지역을, 최고의 자리에 오를 수 잇도록</p>
-								<p className="my-2">여려분이 함께 해주세요.</p>
+								<p className="my-2">나의 학교를, 나의 지역을, 최고의 자리에 </p>
+								<p className="my-2">오를 수 있도록 여려분이 함께 해주세요.</p>
 								<p className="my-2">참! 1등을 한 학교와 지역에는 상응하는 칭호를 선물로 드립니다.</p>
 							</div>
 						</div>
@@ -113,7 +113,7 @@ export default function AboutPage() {
 					{/* 단락3 */}
 					<div className=" mb-80 mt-20 flex flex-row justify-between">
 						<div>
-							<p className="mb-6 text-xl font-bold text-primary">칭호 시스템</p>
+							<p className="mb-4 text-xl font-bold text-primary">칭호 시스템</p>
 							<p className="my-2 text-3xl font-extrabold text-grey69">경쟁에 지치셨다고요? </p>
 							<p className="my-2 text-3xl font-extrabold text-grey69">깃발에서 선물해드리는</p>
 							<p className="my-2 text-3xl font-extrabold text-grey69">칭호를 모아보세요.</p>
@@ -122,7 +122,7 @@ export default function AboutPage() {
 								<p className="my-2">사용자의 실력향상을 위한 다양한 미션과 칭호가 서비스중입니다.</p>
 								<p className="my-2">아직은 코린이 일지몰라도, 매일매일 열심히 하다보면</p>
 								<p className="my-2">여러분의 목표를 위한 다양한 칭호를 획득하며, 내실을 다져보세요.</p>
-								<p className="my-2">히든 칭호를 찾는것은 덤!</p>
+								<p className="my-2">히든 칭호를 찾는 재미는 덤!</p>
 							</div>
 						</div>
 						<div className=" w-2/5">
@@ -144,7 +144,7 @@ export default function AboutPage() {
 								part={'backend'}
 								nickName={'자유로운 영혼'}
 								gitId={'khyojun'}
-								blaBla={'자유롭게 살고 싶네요'}
+								blaBla={'자유롭게 살고 싶네요.'}
 							/>
 							<div className="w-8"></div>
 							<PeopleCard
@@ -152,7 +152,7 @@ export default function AboutPage() {
 								part={'frontend'}
 								nickName={'코리아 슬라임'}
 								gitId={'suwonthugger'}
-								blaBla={'저는 힙합만 들으면 자꾸 리듬을 타게 되네요'}
+								blaBla={'저는 힙합만 들으면 자꾸 리듬을 타게 되네요.'}
 							/>
 						</div>
 						<div className="flex flex-row">
@@ -161,7 +161,7 @@ export default function AboutPage() {
 								part={'backend'}
 								nickName={'심심한 감자'}
 								gitId={'leesj000603'}
-								blaBla={'맥북 쓰고 싶어요'}
+								blaBla={'맥북 쓰고 싶어요.'}
 							/>
 							<div className="w-8"></div>
 							<PeopleCard

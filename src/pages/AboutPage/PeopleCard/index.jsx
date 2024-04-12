@@ -16,14 +16,14 @@ export default function PeopleCard({ name, part, nickName, gitId, blaBla }) {
 						<p className="my-auto ml-4  text-sm text-grey69">{part}</p>
 					</div>
 
-					<img src={logo} className="h-6 w-6" alt="logo" />
+					<img src={logo} className="h-7 w-7" alt="logo" />
 				</div>
 				<div className="mb-3 flex flex-row text-sm">
-					<p className=" text-primary">{nickName}</p>
+					<p className=" font-bold text-primary">{nickName}</p>
 					<button onClick={handleOpenGitHubWindow} className=" flex flex-row">
-						<p className=" ml-8 font-bold">{gitId}</p>
-						<img src={openInNew} className="my-auto ml-2 h-4 w-4 " alt="logo" />
-						<p>GitHub 바로가기</p>
+						<p className=" ml-4 font-normal">{gitId}</p>
+						<img src={openInNew} className="my-auto ml-2 mr-1 h-4 w-4 " alt="logo" />
+						<p className="font-normal">GitHub</p>
 					</button>
 				</div>
 				<p className="mb-3 text-sm text-grey69">광운대학교 정보융합학부</p>
