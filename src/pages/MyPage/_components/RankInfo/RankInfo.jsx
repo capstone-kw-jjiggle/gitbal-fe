@@ -64,7 +64,7 @@ export default function RankInfo() {
 			<LanguageChartCard name={'Java Script'} />
 			<div className="h-76 mb-8 flex w-full flex-col rounded-2xl border border-gray-200 p-4 text-black19 shadow-lg">
 				<h2 className="mb-12 text-xl font-extrabold">모내기 2024 시즌</h2>
-				<img className="mb-8 w-full" src={'https://ghchart.rshah.org/1368E8/suwonthugger'} alt="깃허브 모내기 사진" />
+				<img className="mb-8 w-full" src={'https://ghchart.rshah.org/1050ff/suwonthugger'} alt="깃허브 모내기 사진" />
 			</div>
 		</>
 	);
