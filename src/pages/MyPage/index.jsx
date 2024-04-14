@@ -27,7 +27,9 @@ export default function MyPage() {
 				</div>
 				<div className="flex flex-col">
 					<div className="relative mt-24 h-10 w-full rounded-lg bg-gray-200">
-						<div className="relative h-full w-1/2 rounded-lg bg-primary">
+						<div
+							style={{ '--dynamic-width': '50%' }}
+							className="animate-dynamicWidth relative h-full w-1/2 rounded-lg bg-primary">
 							<div className="absolute -top-10 right-0">
 								<SmallProfileImage />
 							</div>
@@ -51,7 +53,9 @@ export default function MyPage() {
 								<SmallProfileImage />
 							</div>
 						</div>
-						<div className="absolute h-full w-1/2 rounded-lg bg-primary">
+						<div
+							style={{ '--dynamic-width': '50%' }}
+							className="animate-dynamicWidth absolute h-full w-1/2 rounded-lg bg-primary">
 							<div className="absolute -top-10 right-0">
 								<SmallProfileImage />
 							</div>
