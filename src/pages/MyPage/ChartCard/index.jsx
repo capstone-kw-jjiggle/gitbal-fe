@@ -2,7 +2,7 @@ import ScoreChart from '../ScoreChart';
 
 export default function ChartCard({ title, name, rank }) {
 	return (
-		<div className="border-gray-200px-4 mb-8 flex w-full items-center rounded-2xl border p-4 text-black19 shadow-lg">
+		<div className="h-76 mb-8 flex w-full items-center rounded-2xl border border-gray-200 p-4 text-black19 shadow-lg">
 			<div className="flex h-60 w-5/12 flex-col">
 				<div className="flex w-full gap-2 ">
 					<h2 className="text-xl font-extrabold uppercase">{title}</h2>

@@ -68,22 +68,13 @@ export default function MyPage() {
 						</div>
 					</div>
 				</div>
-				<div className="border-gray-200px-4 mb-10 flex w-full items-center rounded-2xl border p-4 text-black19 shadow-lg">
-					<div className="flex h-60 w-5/12 flex-col">
-						<div className="flex w-full gap-2 ">
-							<h2 className="text-xl font-extrabold ">SCHOOL</h2>
-							<span className="text-xl font-extrabold text-grey69">광운대학교</span>
-						</div>
-						<div className="flex w-full items-center justify-center py-16">
-							<h2 className="text-5xl font-extrabold">{2}등</h2>
-						</div>
-					</div>
-					<div className="flex h-60 w-7/12">
-						<ScoreChart />
-					</div>
-				</div>
+				<ChartCard title={'school'} name={'광운대학교'} rank={1} />
 				<ChartCard title={'region'} name={'경기도'} rank={1} />
 				<LanguageChartCard name={'Java Script'} />
+				<div className="h-76 mb-8 flex w-full flex-col rounded-2xl border border-gray-200 p-4 text-black19 shadow-lg">
+					<h2 className="mb-12 text-xl font-extrabold">모내기 2024 시즌</h2>
+					<img className="mb-8 w-full" src={'https://ghchart.rshah.org/1368E8/suwonthugger'} alt="깃허브 모내기 사진" />
+				</div>
 			</MainContainer>
 		</>
 	);
