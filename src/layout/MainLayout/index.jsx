@@ -6,7 +6,7 @@ import Header from '@/layout/MainLayout/Header';
 export default function MainLayout() {
 	return (
 		<div className=" flex min-h-screen w-screen flex-col">
-			<div className="sticky top-0 flex w-screen shadow-lg">
+			<div className="sticky top-0 z-10 flex w-screen bg-white shadow-lg">
 				<div className="mx-auto w-3/5">
 					<Header />
 				</div>

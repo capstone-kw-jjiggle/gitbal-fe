@@ -12,9 +12,15 @@ export default {
 				greyD9: '#d9d9d9',
 				greyF5: '#F5F5F5',
 			},
-			// fontSize: {
-			//   '15px': '15px',
-			// },
+			keyframes: {
+				dynamicWidth: {
+					'0%': { width: '0%' },
+					'100%': { width: 'var(--dynamic-width)' }, // CSS 변수 사용
+				},
+			},
+			animation: {
+				dynamicWidth: 'dynamicWidth 0.5s ease-out forwards',
+			},
 		},
 	},
 	plugins: [],
