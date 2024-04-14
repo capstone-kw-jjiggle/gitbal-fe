@@ -1,4 +1,4 @@
-import ScoreChart from '../ScoreChart';
+import ScoreChart from '@/pages/MyPage/_components/RankInfo/_components/ScoreChart';
 
 export default function ChartCard({ title, name, rank }) {
 	return (
