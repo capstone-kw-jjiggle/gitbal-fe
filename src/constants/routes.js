@@ -4,8 +4,8 @@ export const routes = {
 	school: '/school-page',
 	region: '/region-page',
 	myPage: '/my-page',
-	privacy: 'privacy-page',
-	tos: 'tos-page',
+	privacy: '/privacy-page',
+	tos: '/tos-page',
 	auth: {
 		login: '/auth/login',
 		schoolSetting: '/auth/school',
