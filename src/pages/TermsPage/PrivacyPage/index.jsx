@@ -1,4 +1,5 @@
 export default function PrivacyPage() {
+	window.scrollTo(0, 0);
 	return (
 		<>
 			<div className="items-left mx-auto my-auto mt-24 flex w-3/5 flex-col text-sm text-black19 ">
