@@ -51,6 +51,7 @@ export default function MainPage() {
 											className="h-8 w-32 rounded bg-primary text-sm font-bold text-white shadow-lg">
 											학교 순위
 										</button>
+
 										<button
 											onClick={() => {
 												navigate(routes.region);

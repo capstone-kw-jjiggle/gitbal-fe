@@ -7,6 +7,8 @@ import SchoolPage from '../pages/SchoolPage';
 import RegionPage from '../pages/RegionPage';
 import MyPage from '../pages/MyPage';
 import AboutPage from '../pages/AboutPage';
+import PrivacyPage from '../pages/TermsPage/PrivacyPage';
+import TosPage from '../pages/TermsPage/TosPage';
 
 export const mainRoutes = {
 	path: '/',
@@ -35,6 +37,14 @@ export const mainRoutes = {
 		{
 			path: routes.myPage,
 			element: <MyPage />,
+		},
+		{
+			path: routes.privacy,
+			element: <PrivacyPage />,
+		},
+		{
+			path: routes.tos,
+			element: <TosPage />,
 		},
 	],
 };

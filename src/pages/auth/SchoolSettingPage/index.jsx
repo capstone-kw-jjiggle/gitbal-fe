@@ -2,12 +2,16 @@ import { useState, useEffect } from 'react';
 import Input from './Input';
 import MyDropdownSelect from '../../../components/MyDropdownSelect';
 import { options } from './_data/mock';
+import { useNavigate } from 'react-router-dom';
+import { routes } from '@/constants/routes';
 
 export default function SchoolSettingPage() {
 	const [school, setSchool] = useState('');
 	const [email, setEmail] = useState('');
 	const [key, setKey] = useState('');
 	const [agree, setAgree] = useState(false); // 체크박스 상태 추가
+
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		console.log(school);
@@ -71,7 +75,13 @@ export default function SchoolSettingPage() {
 						checked={agree}
 						onChange={handleInputValueAgree} // 체크 상태 변경 시 setAgree 호출
 					/>
-					<p className="flex text-sm">*서비스 제공을 목적으로 개인정보 수집 및 이용(필수)에 동의합니다.</p>
+					<p className=" flex-row text-sm">
+						*서비스 제공을 목적으로{' '}
+						<button className=" underline underline-offset-4" onClick={() => navigate(routes.privacy)}>
+							개인정보 수집 및 이용(필수)
+						</button>
+						에 동의합니다.
+					</p>
 				</div>
 				<button
 					className={`mb-2 mt-6 h-11 w-36 rounded bg-primary text-sm font-bold text-white ${
