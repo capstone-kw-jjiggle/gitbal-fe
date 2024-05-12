@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Input from './Input';
+import Input from './components/input';
 import MyDropdownSelect from '../../../components/MyDropdownSelect';
 import { options } from './_data/mock';
 import { useNavigate } from 'react-router-dom';
