@@ -16,7 +16,7 @@ export default function RankInfo() {
 				<div className="relative mt-24 h-10 w-full rounded-lg bg-gray-200">
 					<div
 						style={{ '--dynamic-width': '50%' }}
-						className="animate-dynamicWidth relative h-full w-1/2 rounded-lg bg-primary">
+						className="relative h-full w-1/2 animate-dynamicWidth rounded-lg bg-primary">
 						<div className="absolute -top-10 right-0">
 							<SmallProfileImage />
 						</div>
@@ -42,7 +42,7 @@ export default function RankInfo() {
 					</div>
 					<div
 						style={{ '--dynamic-width': '50%' }}
-						className="animate-dynamicWidth absolute h-full w-1/2 rounded-lg bg-primary">
+						className="absolute h-full w-1/2 animate-dynamicWidth rounded-lg bg-primary">
 						<div className="absolute -top-10 right-0">
 							<SmallProfileImage />
 						</div>
