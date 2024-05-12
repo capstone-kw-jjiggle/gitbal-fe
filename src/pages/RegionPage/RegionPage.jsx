@@ -6,8 +6,7 @@ import MyProfile from '../../components/MyProfile';
 import { MyRegionCard, RegionWinnerCard } from '@components/Cards';
 
 import level4 from './../../assets/images/regionLevel/regionLevel4.svg'; //임시
-import RegionRankList from './RegionRankList/RegionRankList';
-
+import RegionRankList from './RegionRankList/components/RegionRankList';
 export default function RegionPage() {
 	return (
 		<>

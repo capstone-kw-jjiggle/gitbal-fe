@@ -3,7 +3,8 @@ import Divider from '../../components/Divider';
 import logo from '@/assets/images/userLevel/userLevel3.svg';
 import testImg from '@/assets/images/testImg/aboutTestImg.jpeg';
 import testImg2 from '@/assets/images/testImg/aboutTestImg2.jpeg';
-import PeopleCard from './PeopleCard';
+
+import AboutPeopleCard from './components/AboutPeopleCard';
 
 export default function AboutPage() {
 	const movePointHowToUse = useRef();
@@ -139,7 +140,7 @@ export default function AboutPage() {
 					<img src={testImg2} alt="testImg" className="mt-20 rounded-xl shadow-xl" />
 					<div className="mb-40 mt-10 flex flex-col">
 						<div className="my-8 flex flex-row">
-							<PeopleCard
+							<AboutPeopleCard
 								name={'김효준'}
 								part={'backend'}
 								nickName={'자유로운 영혼'}
@@ -147,7 +148,7 @@ export default function AboutPage() {
 								blaBla={'자유롭게 살고 싶네요.'}
 							/>
 							<div className="w-8"></div>
-							<PeopleCard
+							<AboutPeopleCard
 								name={'서대원'}
 								part={'frontend'}
 								nickName={'코리아 슬라임'}
@@ -156,7 +157,7 @@ export default function AboutPage() {
 							/>
 						</div>
 						<div className="flex flex-row">
-							<PeopleCard
+							<AboutPeopleCard
 								name={'이승준'}
 								part={'backend'}
 								nickName={'심심한 감자'}
@@ -164,7 +165,7 @@ export default function AboutPage() {
 								blaBla={'맥북 쓰고 싶어요.'}
 							/>
 							<div className="w-8"></div>
-							<PeopleCard
+							<AboutPeopleCard
 								name={'박우석'}
 								part={'frontend'}
 								nickName={'말하는 자몽'}

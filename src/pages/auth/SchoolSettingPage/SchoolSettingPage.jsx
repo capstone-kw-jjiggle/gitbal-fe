@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Input from './components/input';
+import SchoolSettingInput from './components/SchoolSettingInput';
 import MyDropdownSelect from '../../../components/MyDropdownSelect';
 import { options } from './_data/mock';
 import { useNavigate } from 'react-router-dom';
@@ -67,7 +67,12 @@ export default function SchoolSettingPage() {
 			</p>
 			<form className="mx-auto flex w-11/12 flex-col items-center">
 				<MyDropdownSelect placeholder={'클릭하세요'} onSelectChange={handleSelectValueSchool} optionsData={options} />
-				<Input placeholder={'대학 이메일 입력'} type={'email'} value={email} onChange={handleInputValueEmail} />
+				<SchoolSettingInput
+					placeholder={'대학 이메일 입력'}
+					type={'email'}
+					value={email}
+					onChange={handleInputValueEmail}
+				/>
 				<div className="flex-start mt-5 flex">
 					<input
 						type="checkbox"
@@ -89,7 +94,7 @@ export default function SchoolSettingPage() {
 					}`}>
 					<p className="">인증번호 전송</p>
 				</button>
-				<Input
+				<SchoolSettingInput
 					placeholder={'인증번호 입력'}
 					type={'number'}
 					value={key}
