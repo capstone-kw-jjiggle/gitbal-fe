@@ -1,6 +1,6 @@
 import level5 from './../../../../assets/images/regionLevel/regionLevel5.svg';
 
-export default function RegionRank1st({ rank, regionName, score, scoreIncrease, mvpId }) {
+export default function RegionRank5th({ rank, regionName, score, scoreIncrease, mvpId }) {
 	return (
 		<div className="flex h-full  w-full  justify-between px-6 py-4 text-black19">
 			<img src={level5} className=" my-auto flex h-20 w-1/3 " />
