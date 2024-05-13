@@ -1,10 +1,10 @@
 import { useRef } from 'react';
-import Divider from '../../components/Divider';
+import Divider from '@/components/Divider';
 import logo from '@/assets/images/userLevel/userLevel3.svg';
 import testImg from '@/assets/images/testImg/aboutTestImg.jpeg';
 import testImg2 from '@/assets/images/testImg/aboutTestImg2.jpeg';
 
-import AboutPeopleCard from './components/AboutPeopleCard';
+import AboutPeopleCard from '@/pages/AboutPage/components/AboutPeopleCard';
 
 export default function AboutPage() {
 	const movePointHowToUse = useRef();

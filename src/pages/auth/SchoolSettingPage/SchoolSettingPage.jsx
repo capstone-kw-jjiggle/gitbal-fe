@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import SchoolSettingInput from './components/SchoolSettingInput';
-import MyDropdownSelect from '../../../components/MyDropdownSelect';
-import { options } from './_data/mock';
+import SchoolSettingInput from '@/pages/auth/SchoolSettingPage/components/SchoolSettingInput';
+import MyDropdownSelect from '@/components/MyDropdownSelect';
+import { options } from '@/pages/auth/SchoolSettingPage/_data/mock';
 import { useNavigate } from 'react-router-dom';
 import { routes } from '@/constants/routes';
 

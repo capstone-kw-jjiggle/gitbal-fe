@@ -1,10 +1,10 @@
-import { regionRankData } from '../_data/mock';
-import RegionRank1st from './RegionRank1st';
-import RegionRank2nd from './RegionRank2nd';
-import RegionRank3rd from './RegionRank3rd';
-import RegionRank4th from './RegionRank4th';
-import RegionRank5th from './RegionRank5th';
-import RegionRankDivider from './RegionRankDivider';
+import { regionRankData } from '@/pages/RegionPage/_data/mock';
+import RegionRank1st from '@/pages/RegionPage/components/RegionRank1st';
+import RegionRank2nd from '@/pages/RegionPage/components/RegionRank2nd';
+import RegionRank3rd from '@/pages/RegionPage/components/RegionRank3rd';
+import RegionRank4th from '@/pages/RegionPage/components/RegionRank4th';
+import RegionRank5th from '@/pages/RegionPage/components/RegionRank5th';
+import RegionRankDivider from '@/pages/RegionPage/components/RegionRankDivider';
 
 export default function RegionRankList() {
 	return (

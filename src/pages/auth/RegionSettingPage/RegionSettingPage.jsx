@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import MyDropdownSelect from '../../../components/MyDropdownSelect';
-import { options } from './_data/mock';
+import MyDropdownSelect from '@/components/MyDropdownSelect';
+import { options } from '@/pages/auth/RegionSettingPage/_data/mock';
 import { useNavigate } from 'react-router-dom';
 
 export default function RegionSettingPage() {
