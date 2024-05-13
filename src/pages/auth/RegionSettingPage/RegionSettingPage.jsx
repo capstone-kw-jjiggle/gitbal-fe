@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import MyDropdownSelect from '@/components/MyDropdownSelect';
 import { options } from '@/pages/auth/RegionSettingPage/_data/mock';
 import { useNavigate } from 'react-router-dom';
+
+import MyDropdownSelect from '@/components/MyDropdownSelect';
 
 export default function RegionSettingPage() {
 	const [region, setRegion] = useState('');
