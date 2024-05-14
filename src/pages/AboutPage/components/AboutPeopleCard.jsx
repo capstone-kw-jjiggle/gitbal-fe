@@ -1,7 +1,7 @@
 import logo from '@/assets/images/userLevel/userLevel3.svg';
 import openInNew from '@/assets/images/icon/open_in_new.svg';
 
-export default function PeopleCard({ name, part, nickName, gitId, blaBla }) {
+export default function AboutPeopleCard({ name, part, nickName, gitId, blaBla }) {
 	const handleOpenGitHubWindow = () => {
 		const url = `https://github.com/${gitId}`;
 		window.open(url, '_blank');

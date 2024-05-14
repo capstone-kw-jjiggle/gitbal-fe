@@ -5,7 +5,7 @@ import { routes } from '../constants/routes';
 import MainPage from '../pages/MainPage';
 import SchoolPage from '../pages/SchoolPage';
 import MyPage from '../pages/MyPage';
-import AboutPage from '../pages/AboutPage';
+import AboutPage from '../pages/AboutPage/AboutPage';
 import PrivacyPage from '../pages/TermsPage/PrivacyPage';
 import TosPage from '../pages/TermsPage/TosPage';
 import RegionPage from '../pages/RegionPage/RegionPage';

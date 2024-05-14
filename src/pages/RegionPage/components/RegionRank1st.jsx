@@ -1,4 +1,4 @@
-import level4 from './../../../../assets/images/regionLevel/regionLevel4.svg';
+import level4 from '@/assets/images/regionLevel/regionLevel4.svg';
 
 export default function RegionRank1st({ rank, regionName, score, scoreIncrease, mvpId }) {
 	return (

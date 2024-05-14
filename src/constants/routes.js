@@ -10,6 +10,6 @@ export const routes = {
 		login: '/auth/login',
 		schoolSetting: '/auth/school',
 		regionSetting: '/auth/region',
-		profileSetting: '/auth/profile',
+		loginCompletePage: '/auth/complete',
 	},
 };

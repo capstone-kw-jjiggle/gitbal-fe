@@ -1,16 +1,16 @@
-import level1 from './../../../../assets/images/regionLevel/regionLevel1.svg';
+import level2 from '@/assets/images/regionLevel/regionLevel2.svg';
 
-export default function RegionRank4th({ rank, regionName, score, scoreIncrease, mvpId }) {
+export default function RegionRank3rd({ rank, regionName, score, scoreIncrease, mvpId }) {
 	return (
-		<div className="w-1/4">
+		<div className="w-1/3">
 			<div className="h-full w-full px-6 py-7 text-black19">
 				<div className=" flex justify-between">
-					<img src={level1} className=" mt-1 h-12 w-12" />
+					<img src={level2} className=" h-14 w-14" />
 					<div className="flex flex-col justify-end text-end">
-						<p className=" text-lg font-bold">
+						<p className="text-xl font-bold">
 							{rank}위 {regionName}
 						</p>
-						<p className=" mt-1 text-sm text-primary">뚱이네집</p>
+						<p className=" mt-2 text-sm text-primary">컴튼</p>
 					</div>
 				</div>
 				<div className="mt-8 flex flex-col  justify-between align-bottom">
