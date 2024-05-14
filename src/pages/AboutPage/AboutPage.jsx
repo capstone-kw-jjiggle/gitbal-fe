@@ -35,13 +35,17 @@ export default function AboutPage() {
 						</div>
 					</div>
 				</div>
-				<div className="mx-auto mb-4 mt-40 flex justify-center text-xl text-grey69">
-					<button className="mx-4" onClick={onMoveToHowtoUse}>
-						How to use
-					</button>
-					<button className="mx-4" onClick={onMoveToPeople}>
-						People
-					</button>
+				<div className="mx-auto mb-4 mt-40 flex flex-row  text-xl text-grey69">
+					<div className=" flex w-1/2 justify-end">
+						<button className="mx-4" onClick={onMoveToHowtoUse}>
+							How to use
+						</button>
+					</div>
+					<div className=" flex w-1/2 justify-start">
+						<button className="mx-4" onClick={onMoveToPeople}>
+							People
+						</button>
+					</div>
 				</div>
 			</div>
 			<Divider />
