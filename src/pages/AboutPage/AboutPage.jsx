@@ -1,20 +1,17 @@
 import { useRef } from 'react';
+
 import Divider from '@/components/Divider';
 import logo from '@/assets/images/userLevel/userLevel3.svg';
 import testImg from '@/assets/images/testImg/aboutTestImg.jpeg';
 import testImg2 from '@/assets/images/testImg/aboutTestImg2.jpeg';
-
 import AboutPeopleCard from '@/pages/AboutPage/components/AboutPeopleCard';
 
 export default function AboutPage() {
 	const movePointHowToUse = useRef();
-	const movePeople = useRef();
+	const movePointPeople = useRef();
 
-	const onMoveToHowtoUse = () => {
-		movePointHowToUse.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-	};
-	const onMoveToPeople = () => {
-		movePeople.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+	const scrollToRef = (ref) => {
+		ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
 	};
 
 	return (
@@ -37,12 +34,12 @@ export default function AboutPage() {
 				</div>
 				<div className="mx-auto mb-4 mt-40 flex flex-row  text-xl text-grey69">
 					<div className=" flex w-1/2 justify-end">
-						<button className="mx-4" onClick={onMoveToHowtoUse}>
+						<button className="mx-4" onClick={() => scrollToRef(movePointHowToUse)}>
 							How to use
 						</button>
 					</div>
 					<div className=" flex w-1/2 justify-start">
-						<button className="mx-4" onClick={onMoveToPeople}>
+						<button className="mx-4" onClick={() => scrollToRef(movePointPeople)}>
 							People
 						</button>
 					</div>
@@ -137,7 +134,7 @@ export default function AboutPage() {
 				</div>
 
 				{/* 우리팀 소개 */}
-				<div ref={movePeople} className="h-1"></div>
+				<div ref={movePointPeople} className="h-1"></div>
 				<div>
 					<p className="mt-40 text-center text-xl font-bold text-primary">Our Team</p>
 					<p className="mt-4 text-center text-4xl font-bold">깃발의 개발자들을 소개 드립니다.</p>
