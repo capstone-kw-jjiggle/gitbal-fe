@@ -13,16 +13,22 @@ export default function AboutPeopleCard({ name, part, nickName, gitId, blaBla })
 
 	const handleCardClick = () => {
 		console.log('click');
-		setClickCount((prev) => prev + 1);
+		setClickCount((prev) => {
+			if (prev < 4) {
+				return prev + 1;
+			} else {
+				return (prev = 1);
+			}
+		});
 		console.log(clickCount);
 	};
 
 	return (
 		<div className="w-full" onClick={handleCardClick}>
 			{clickCount >= 4 ? (
-				<div className="w-full rounded-xl bg-white p-8 text-black19 shadow-xl">
+				<div className="w-full rounded-xl bg-white p-4 text-black19 shadow-xl">
 					<div className="mb-4 flex flex-row justify-between">
-						<img src={testImg2} alt="testImg" className="mt-20 rounded-xl shadow-xl" />
+						<img src={testImg2} alt="testImg" className="rounded-xl shadow-xl" />
 					</div>
 				</div>
 			) : (
