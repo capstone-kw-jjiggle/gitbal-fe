@@ -1,11 +1,13 @@
-import Divider from '@/pages/MyPage/_components/Divider';
+import { useState } from 'react';
+
 import MainContainer from '@components/MainContainer';
 import MyProfile from '@components/MyProfile';
-import Shortcut from '@/pages/MyPage/_components/Shortcut';
-import RankInfo from '@/pages/MyPage/_components/RankInfo';
-import { useState } from 'react';
-import SettingInfo from '@/pages/MyPage/_components/SettingInfo';
-import TitleInfo from '@/pages/MyPage//_components/TitleInfo';
+
+import Divider from '@/pages/MyPage/components/LineDivider';
+import Shortcut from '@/pages/MyPage/components/Shortcut';
+import SettingInfo from '@/pages/MyPage/components/SettingInfo/SettingInfo';
+import TitleInfo from '@/pages/MyPage/components/TitleInfo/TitleInfo';
+import RankInfo from '@/pages/MyPage/components/RankInfo/RankInfo';
 
 const 버튼에따른컴포넌트 = {
 	RANK: <RankInfo />,
