@@ -13,7 +13,7 @@ export default function RegionPage() {
 			<MainContainer>
 				<div className="mt-8 flex w-full items-start justify-between text-black19">
 					<div className="flex w-1/2 flex-col">
-						<RankTitle />
+						<RankTitle title={'지역 랭킹'} daysLeft={'100'} />
 						<MyProfile />
 					</div>
 					<MyRegionCard imgSrc={level4} />
