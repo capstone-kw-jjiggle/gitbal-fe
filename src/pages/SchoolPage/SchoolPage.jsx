@@ -1,10 +1,11 @@
 import Divider from '@components/Divider';
 import MainContainer from '@components/MainContainer';
-import Pagination from '@/pages/SchoolPage/Pagination';
-import SchoolRankList from '@/pages/SchoolPage/SchoolRankList';
 import { MySchoolCard, SchoolWinnerCard } from '@components/Cards';
 import RankTitle from '@components/RankTitle';
-import MyProfile from '../../components/MyProfile';
+import MyProfile from '@components/MyProfile';
+
+import Pagination from '@/pages/SchoolPage/components/Pagination';
+import SchoolRankList from '@/pages/SchoolPage/components/SchoolRankList';
 
 export default function SchoolPage() {
 	return (
