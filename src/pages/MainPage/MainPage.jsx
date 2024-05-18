@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import { routes } from '@/constants/routes';
 
-import UserRankList from '@/pages/MainPage/UserRankList';
-import Pagination from '@/pages/MainPage/Pagination';
+import UserRankList from '@/pages/MainPage/components/UserRankList';
+import Pagination from '@/pages//MainPage/components/Pagination';
 import MainContainer from '@components/MainContainer';
 import logo from '@/assets/images/userLevel/userLevel3.svg';
 

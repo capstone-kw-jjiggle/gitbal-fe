@@ -1,10 +1,11 @@
 import Divider from '@components/Divider';
 import MainContainer from '@components/MainContainer';
-import Pagination from '@/pages/SchoolPage/Pagination';
-import SchoolRankList from '@/pages/SchoolPage/SchoolRankList';
 import { MySchoolCard, SchoolWinnerCard } from '@components/Cards';
 import RankTitle from '@components/RankTitle';
-import MyProfile from '../../components/MyProfile';
+import MyProfile from '@components/MyProfile';
+
+import Pagination from '@/pages/SchoolPage/components/Pagination';
+import SchoolRankList from '@/pages/SchoolPage/components/SchoolRankList';
 
 export default function SchoolPage() {
 	return (
@@ -12,7 +13,7 @@ export default function SchoolPage() {
 			<MainContainer>
 				<div className="mt-8 flex w-full items-start justify-between text-black19">
 					<div className="flex w-1/2 flex-col">
-						<RankTitle />
+						<RankTitle title={'학교 랭킹'} daysLeft={'100'} />
 						<MyProfile />
 					</div>
 					<MySchoolCard />
