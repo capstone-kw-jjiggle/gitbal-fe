@@ -7,10 +7,10 @@ import testImg2 from '@/assets/images/testImg/aboutTestImg2.jpeg';
 import AboutPeopleCard from '@/pages/AboutPage/components/AboutPeopleCard';
 
 export default function AboutPage() {
-	const movePointHowToUse = useRef();
-	const movePointPeople = useRef();
+	const moveHowToUseRef = useRef();
+	const movePeopleRef = useRef();
 
-	const scrollToRef = (ref) => {
+	const handleScrollRef = (ref) => {
 		ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
 	};
 
@@ -34,12 +34,12 @@ export default function AboutPage() {
 				</div>
 				<div className="mx-auto mb-4 mt-40 flex flex-row  text-xl text-grey69">
 					<div className=" flex w-1/2 justify-end">
-						<button className="mx-4" onClick={() => scrollToRef(movePointHowToUse)}>
+						<button className="mx-4" onClick={() => handleScrollRef(moveHowToUseRef)}>
 							How to use
 						</button>
 					</div>
 					<div className=" flex w-1/2 justify-start">
-						<button className="mx-4" onClick={() => scrollToRef(movePointPeople)}>
+						<button className="mx-4" onClick={() => handleScrollRef(movePeopleRef)}>
 							People
 						</button>
 					</div>
@@ -48,7 +48,7 @@ export default function AboutPage() {
 			<Divider />
 			<div className="mx-auto w-3/5">
 				{/* 우리 서비스 소개 */}
-				<div className="h-20" ref={movePointHowToUse}></div>
+				<div className="h-20" ref={moveHowToUseRef}></div>
 				<div className="mt-20 flex flex-row justify-between">
 					<div className=" my-auto text-4xl font-extrabold text-primary">
 						<p className="my-2">깃허브</p>
@@ -134,7 +134,7 @@ export default function AboutPage() {
 				</div>
 
 				{/* 우리팀 소개 */}
-				<div ref={movePointPeople} className="h-1"></div>
+				<div ref={movePeopleRef} className="h-1"></div>
 				<div>
 					<p className="mt-40 text-center text-xl font-bold text-primary">Our Team</p>
 					<p className="mt-4 text-center text-4xl font-bold">깃발의 개발자들을 소개 드립니다.</p>

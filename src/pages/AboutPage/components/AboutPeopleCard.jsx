@@ -14,10 +14,8 @@ export default function AboutPeopleCard({ name, part, nickName, gitId, blaBla })
 	};
 
 	const handleCardClick = () => {
-		console.log('click');
 		setClickCount((prev) => {
 			const newCount = prev < CHANGE_COUNT ? prev + 1 : 1;
-			console.log(newCount); // 새로운 카운트 값을 바로 로그로 확인
 			return newCount;
 		});
 	};
