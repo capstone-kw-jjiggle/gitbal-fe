@@ -1,20 +1,26 @@
 import SchoolChangeModal from '@/pages/MyPage/components/Modal/SchoolChangeModal';
+import RegionChangeModal from '@/pages/MyPage/components/Modal/RegionChangeModal';
 import SettingButton from './SettingButton';
 import SettingItem from './SettingItem';
 
 import { useState, useRef, useEffect } from 'react';
 
 export default function SettingInfo() {
-	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [isSchoolModalOpen, setIsSchoolModalOpen] = useState(false);
+	const [isRegionModalOpen, setIsRegionModalOpen] = useState(false);
 
-	const showModal = () => {
-		setIsModalOpen(true);
+	const showSchoolModal = () => {
+		setIsSchoolModalOpen(true);
+	};
+	const showRegionModal = () => {
+		setIsRegionModalOpen(true);
 	};
 
 	return (
 		<>
 			{/* 모달구역 */}
-			{isModalOpen && <SchoolChangeModal setModalOpen={setIsModalOpen} />}
+			{isSchoolModalOpen && <SchoolChangeModal setModalOpen={setIsSchoolModalOpen} />}
+			{isRegionModalOpen && <RegionChangeModal setModalOpen={setIsRegionModalOpen} />}
 
 			<div className="mb-8 mt-8 flex w-full flex-col items-center justify-between rounded-2xl border border-gray-200 p-6 text-black19 shadow-lg">
 				<section className="w-full">
@@ -22,13 +28,13 @@ export default function SettingInfo() {
 					<SettingItem
 						title={'소속학교 == 광운대'}
 						content={'변경버튼을 눌러 재인증을 통해 소속학교를 변경할 수 있습니다.'}
-						SettingButton={<SettingButton title={'변경'} onClick={showModal} />}
+						SettingButton={<SettingButton title={'변경'} onClick={showSchoolModal} />}
 					/>
 					<hr className="bg-red border-1 my-3 border-greyBD" />
 					<SettingItem
 						title={'소속지역 == 경기도'}
 						content={'변경버튼을 눌러 재인증을 통해 소속지역을 변경할 수 있습니다.'}
-						SettingButton={<SettingButton title={'변경'} />}
+						SettingButton={<SettingButton title={'변경'} onClick={showRegionModal} />}
 					/>
 					<hr className="bg-red border-1 my-3 border-greyBD" />
 				</section>

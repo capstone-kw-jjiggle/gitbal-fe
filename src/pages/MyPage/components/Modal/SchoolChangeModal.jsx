@@ -35,11 +35,11 @@ const SchoolChangeModal = ({ setModalOpen }) => {
 	// 모달 외부 클릭 감지를 위한 ref
 	const modalRef = useRef(null);
 
-	useEffect(() => {
-		const handleModalClose = () => {
-			setModalOpen(false);
-		};
+	const handleModalClose = () => {
+		setModalOpen(false);
+	};
 
+	useEffect(() => {
 		const handleClickOutside = (event) => {
 			if (modalRef.current && !modalRef.current.contains(event.target)) {
 				handleModalClose();
@@ -47,10 +47,11 @@ const SchoolChangeModal = ({ setModalOpen }) => {
 		};
 
 		document.addEventListener('mousedown', handleClickOutside);
+
 		return () => {
 			document.removeEventListener('mousedown', handleClickOutside);
 		};
-	}, [modalRef, setModalOpen]);
+	});
 
 	return (
 		<div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 text-black19 backdrop-blur-sm">
@@ -82,10 +83,12 @@ const SchoolChangeModal = ({ setModalOpen }) => {
 							maxLength={4}
 							onChange={handleInputValueKey}
 						/>
+
 						<button
 							className={`mx-auto mb-2 mt-6 h-11 w-36 rounded bg-primary text-sm font-bold text-white ${
 								isAllFormValid() ? '' : 'pointer-events-none opacity-50'
-							}`}>
+							}`}
+							onClick={handleModalClose}>
 							<p className="">변경</p>
 						</button>
 					</div>
