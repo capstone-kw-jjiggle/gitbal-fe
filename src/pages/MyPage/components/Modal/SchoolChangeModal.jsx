@@ -1,7 +1,7 @@
 import MyDropdownSelect from '@/components/MyDropdownSelect';
 import SchoolChangeInput from '@/pages/MyPage/components/Modal/SchoolChangeInput';
 import { options } from '@/pages/auth/SchoolSettingPage/_data/mock';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 const SchoolChangeModal = ({ setModalOpen }) => {
 	const mySchool = '광운대학교';
@@ -9,10 +9,6 @@ const SchoolChangeModal = ({ setModalOpen }) => {
 	const [school, setSchool] = useState('');
 	const [email, setEmail] = useState('');
 	const [key, setKey] = useState('');
-
-	const handleModalClose = () => {
-		setModalOpen(false);
-	};
 
 	function handleSelectValueSchool(event) {
 		setSchool(event.label); //event.value로 받아와도 됨
@@ -32,18 +28,36 @@ const SchoolChangeModal = ({ setModalOpen }) => {
 	};
 
 	const isAllFormValid = () => {
+		//선택 없음일땐 그냥 넘어가야함
 		return school.trim() && email.trim() && key.trim();
 	};
 
+	// 모달 외부 클릭 감지를 위한 ref
+	const modalRef = useRef(null);
+
+	useEffect(() => {
+		const handleModalClose = () => {
+			setModalOpen(false);
+		};
+
+		const handleClickOutside = (event) => {
+			if (modalRef.current && !modalRef.current.contains(event.target)) {
+				handleModalClose();
+			}
+		};
+
+		document.addEventListener('mousedown', handleClickOutside);
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside);
+		};
+	}, [modalRef, setModalOpen]);
+
 	return (
 		<div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 text-black19 backdrop-blur-sm">
-			<div className="w-2/5 ">
-				<div className=" flex flex-col justify-center rounded bg-white p-12">
-					<button className=" float-right place-self-end" onClick={handleModalClose}>
-						X
-					</button>
-					<h1 className=" mx-auto text-lg font-bold">현재 소속학교 == {mySchool}</h1>
-					<div className=" mx-auto flex w-2/3 flex-col">
+			<div ref={modalRef} className="w-2/5 ">
+				<div className="flex flex-col justify-center rounded bg-white p-12">
+					<h1 className="mx-auto text-lg font-bold">현재 소속학교 == {mySchool}</h1>
+					<div className="mx-auto flex w-2/3 flex-col">
 						<MyDropdownSelect
 							placeholder={'클릭하세요'}
 							onSelectChange={handleSelectValueSchool}
@@ -57,7 +71,7 @@ const SchoolChangeModal = ({ setModalOpen }) => {
 						/>
 						<button
 							className={`mx-auto mb-2 mt-6 h-11 w-36 rounded bg-primary text-sm font-bold text-white ${
-								isEmailFormValid() ? '' : 'pointer-events-none opacity-50' // 이멜일 관련 필드가 채워졌을 때 버튼 활성화
+								isEmailFormValid() ? '' : 'pointer-events-none opacity-50'
 							}`}>
 							<p className="">인증번호 전송</p>
 						</button>
@@ -70,7 +84,7 @@ const SchoolChangeModal = ({ setModalOpen }) => {
 						/>
 						<button
 							className={`mx-auto mb-2 mt-6 h-11 w-36 rounded bg-primary text-sm font-bold text-white ${
-								isAllFormValid() ? '' : 'pointer-events-none opacity-50' // 모든 필드가 채워졌을 때 버튼 활성화
+								isAllFormValid() ? '' : 'pointer-events-none opacity-50'
 							}`}>
 							<p className="">변경</p>
 						</button>
