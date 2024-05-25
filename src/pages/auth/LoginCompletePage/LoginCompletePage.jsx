@@ -1,12 +1,24 @@
 import { useNavigate } from 'react-router-dom';
-import logo from '@/assets/images/logo/justLogo.svg';
+import Lottie from 'react-lottie';
+
+import LottieData from '@/assets/images/lottieFiles/logoTest1.json';
 
 export default function LoginCompletePage() {
 	const navigate = useNavigate();
+
+	const defaultOptions = {
+		loop: false,
+		autoplay: true,
+		animationData: LottieData,
+		rendererSettings: {
+			preserveAspectRatio: 'xMidYMid slice',
+		},
+	};
+
 	return (
 		<div className="my-auto flex h-max w-full flex-row ">
 			<div className=" my-auto flex w-1/4 ">
-				<img className="mx-auto " src={logo} alt="logo" />
+				<Lottie options={defaultOptions} height={350} width={350} />
 			</div>
 			<div className="flex h-full w-3/4 flex-col items-end">
 				<p className="text-7xl font-bold">깃발</p>
@@ -19,7 +31,7 @@ export default function LoginCompletePage() {
 				<button
 					className=" mt-12 flex h-10 w-36 place-content-center place-items-center rounded bg-primary text-sm font-semibold text-white hover:bg-blue-400"
 					onClick={() => navigate('/auth/school')}>
-					Git 소셜로그인
+					깃발 시작하기
 				</button>
 			</div>
 		</div>
