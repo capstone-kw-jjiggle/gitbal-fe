@@ -56,7 +56,7 @@ const SchoolChangeModal = ({ setModalOpen }) => {
 	return (
 		<div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 text-black19 backdrop-blur-sm">
 			<div ref={modalRef} className="w-2/5 ">
-				<div className="flex flex-col justify-center rounded bg-white p-12">
+				<div className="flex flex-col justify-center rounded bg-white p-12 shadow-2xl">
 					<h1 className="mx-auto text-lg font-bold">현재 소속학교 == {mySchool}</h1>
 					<div className="mx-auto flex w-2/3 flex-col">
 						<MyDropdownSelect
