@@ -9,8 +9,6 @@ import SettingInfo from '@/pages/MyPage/components/SettingInfo/SettingInfo';
 import TitleInfo from '@/pages/MyPage/components/TitleInfo/TitleInfo';
 import RankInfo from '@/pages/MyPage/components/RankInfo/RankInfo';
 
-import SchoolChangeModal from '@/pages/MyPage/components/Modal/SchoolChangeModal';
-
 const 버튼에따른컴포넌트 = {
 	RANK: <RankInfo />,
 	칭호: <TitleInfo />,
