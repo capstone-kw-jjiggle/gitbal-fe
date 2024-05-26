@@ -30,8 +30,10 @@ export default function LoadingPage() {
 	return (
 		<>
 			<div className="my-auto flex h-max w-full flex-col place-items-center">
-				<Lottie options={defaultOptions} height={210} width={300} />
-				<p className="mt-4 text-xl font-bold text-primary">{texts[textIndex]}</p>
+				<div className=" my-auto">
+					<Lottie options={defaultOptions} height={210} width={300} />
+					<p className="mt-2  text-center text-sm font-semibold text-primary">{texts[textIndex]}</p>
+				</div>
 			</div>
 		</>
 	);
