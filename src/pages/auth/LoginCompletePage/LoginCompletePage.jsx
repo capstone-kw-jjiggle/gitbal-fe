@@ -18,7 +18,7 @@ export default function LoginCompletePage() {
 	return (
 		<div className="my-auto flex h-max w-full flex-row ">
 			<div className=" my-auto flex w-1/4 ">
-				<Lottie options={defaultOptions} height={350} width={350} />
+				<Lottie options={defaultOptions} height={350} width={350} isClickToPauseDisabled />
 			</div>
 			<div className="flex h-full w-3/4 flex-col items-end">
 				<p className="text-7xl font-bold">깃발</p>
