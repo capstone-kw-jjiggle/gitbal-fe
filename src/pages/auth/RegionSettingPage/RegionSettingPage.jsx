@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { options } from '@/pages/auth/RegionSettingPage/_data/mock';
 import { useNavigate } from 'react-router-dom';
+import { useUserInfoStore } from '../../../stores/store';
 
 import MyDropdownSelect from '@/components/MyDropdownSelect';
 
@@ -19,6 +20,8 @@ export default function RegionSettingPage() {
 	function handleSelectValueRegion(event) {
 		setRegion(event.label); //event.value로 받아와도 됨
 	}
+
+	const settingRegion = useUserInfoStore((state) => state.settingRegion);
 
 	return (
 		<div className="mx-auto my-auto flex w-5/12 flex-col items-center text-black19">

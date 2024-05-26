@@ -2,9 +2,11 @@ import { useState, useEffect } from 'react';
 import { options } from '@/pages/auth/SchoolSettingPage/_data/mock';
 import { useNavigate } from 'react-router-dom';
 import { routes } from '@/constants/routes';
+import { useUserInfoStore } from '../../../stores/store';
 
 import SchoolSettingInput from '@/pages/auth/SchoolSettingPage/components/SchoolSettingInput';
 import MyDropdownSelect from '@/components/MyDropdownSelect';
+import { getSchoolList } from '../../../api/auth';
 
 export default function SchoolSettingPage() {
 	const [school, setSchool] = useState('');
@@ -14,26 +16,26 @@ export default function SchoolSettingPage() {
 
 	const navigate = useNavigate();
 
-	useEffect(() => {
-		console.log(school);
-	}, [school]);
-
-	useEffect(() => {
-		console.log(email);
-	}, [email]);
-
-	useEffect(() => {
-		console.log(key);
-	}, [key]);
-
-	useEffect(() => {
-		console.log(agree);
-	}, [agree]);
+	const settingRegion = useUserInfoStore((state) => state.settingRegion);
 
 	const isEmailFormValid = () => {
 		// 이메일 관련 필드가 채워졌는지 확인하는 함수
 		return school.trim() && email.trim() !== '' && agree;
 	};
+
+	const fetchSchoolList = async () => {
+		try {
+			const response = await getSchoolList();
+			console.log(response);
+			return response.data;
+		} catch (e) {
+			console.log(e);
+		}
+	};
+
+	useEffect(() => {
+		fetchSchoolList();
+	}, []);
 
 	const isAllFormValid = () => {
 		// 모든 필드가 채워졌는지 확인하는 함수

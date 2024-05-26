@@ -1,4 +1,4 @@
-import { axios } from 'axios';
+import axios from 'axios';
 
 const axiosConfig = {
 	baseURL: import.meta.env.VITE_BASE_URL,
