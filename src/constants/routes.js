@@ -6,6 +6,7 @@ export const routes = {
 	myPage: '/my-page',
 	privacy: '/privacy-page',
 	tos: '/tos-page',
+	loadingPage: '/loading-page',
 	auth: {
 		login: '/auth/login',
 		schoolSetting: '/auth/school',

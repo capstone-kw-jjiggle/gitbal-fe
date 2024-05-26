@@ -10,6 +10,7 @@ import RegionPage from '@/pages/RegionPage/RegionPage';
 import SchoolPage from '@/pages/SchoolPage/SchoolPage';
 import MainPage from '@/pages/MainPage/MainPage';
 import MyPage from '@/pages/MyPage/MyPage';
+import LoadingPage from '@/pages/LoadingPage/LoadingPage';
 
 export const mainRoutes = {
 	path: '/',
@@ -46,6 +47,10 @@ export const mainRoutes = {
 		{
 			path: routes.tos,
 			element: <TosPage />,
+		},
+		{
+			path: routes.loadingPage,
+			element: <LoadingPage />,
 		},
 	],
 };
