@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import logo from '@/assets/images/logo/justLogo.svg';
 
 export default function LoginPage() {
-	const navigate = useNavigate();
 	return (
 		<div className="my-auto flex h-max w-full flex-row ">
 			<div className="flex h-full w-3/4 flex-col">
@@ -15,7 +14,7 @@ export default function LoginPage() {
 				<p className="mt-4 text-lg text-primary">깃허브 계정을 연결하세요</p>
 				<button
 					className=" mt-4 flex h-10 w-36 place-content-center place-items-center rounded bg-primary text-sm font-semibold text-white hover:bg-blue-400"
-					onClick={() => navigate('/auth/school')}>
+					onClick={() => (window.location.href = 'http://localhost:8080/oauth2/authorization/github')}>
 					Git 소셜로그인
 				</button>
 			</div>

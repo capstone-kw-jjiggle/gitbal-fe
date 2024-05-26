@@ -11,5 +11,6 @@ export const routes = {
 		schoolSetting: '/auth/school',
 		regionSetting: '/auth/region',
 		loginCompletePage: '/auth/complete',
+		tokenPage: '/auth/token',
 	},
 };
