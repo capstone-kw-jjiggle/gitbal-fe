@@ -30,7 +30,7 @@ export default function LoginCompletePage() {
 
 				<button
 					className=" mt-12 flex h-10 w-36 place-content-center place-items-center rounded bg-primary text-sm font-semibold text-white hover:bg-blue-400"
-					onClick={() => navigate('/auth/school')}>
+					onClick={() => navigate('/main-page')}>
 					깃발 시작하기
 				</button>
 			</div>
