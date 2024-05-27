@@ -27,13 +27,15 @@ export default function SchoolSettingPage() {
 		try {
 			const response = await getSchoolList();
 			console.log(response);
-			return response.data;
+			return response;
 		} catch (e) {
 			console.log(e);
 		}
 	};
 
 	useEffect(() => {
+		const evn = import.meta.env.VITE_TEST_DATA;
+		console.log(evn);
 		fetchSchoolList();
 	}, []);
 

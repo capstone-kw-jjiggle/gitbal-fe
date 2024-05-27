@@ -2,8 +2,8 @@ import { client } from '@/api/client';
 
 const AUTH_URL = {
 	JOIN: '/join',
-	GET_SCHOOL_LIST: '/info/school',
-	GET_REGION_LIST: '/info/region',
+	GET_SCHOOL_LIST: '/info/schoolNames',
+	GET_REGION_LIST: '/info/regionNames',
 };
 
 export const userJoin = async (joinData) => {
@@ -16,7 +16,7 @@ export const userJoin = async (joinData) => {
 
 export const getSchoolList = async () => {
 	try {
-		const response = client.get(AUTH_URL.GET_SCHOOL_LIST);
+		const response = await client.get(AUTH_URL.GET_SCHOOL_LIST);
 		return response;
 	} catch (e) {
 		return Promise.reject(e);
@@ -25,7 +25,7 @@ export const getSchoolList = async () => {
 
 export const getRegionList = async () => {
 	try {
-		const response = client.get(AUTH_URL.GET_REGION_LIST);
+		const response = await client.get(AUTH_URL.GET_REGION_LIST);
 		return response;
 	} catch (e) {
 		return Promise.reject(e);
