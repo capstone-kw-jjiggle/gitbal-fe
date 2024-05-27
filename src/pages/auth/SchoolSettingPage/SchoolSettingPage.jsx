@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import { options } from '@/pages/auth/SchoolSettingPage/_data/mock';
 import { useNavigate } from 'react-router-dom';
 import { routes } from '@/constants/routes';
-import { useUserInfoStore } from '../../../stores/store';
 
 import SchoolSettingInput from '@/pages/auth/SchoolSettingPage/components/SchoolSettingInput';
 import MyDropdownSelect from '@/components/MyDropdownSelect';
-import { getSchoolList } from '../../../api/auth';
+import { getSchoolList } from '@/api/auth';
+import { useUserInfoStore } from '@/stores/store';
 
 export default function SchoolSettingPage() {
 	const [school, setSchool] = useState('');
