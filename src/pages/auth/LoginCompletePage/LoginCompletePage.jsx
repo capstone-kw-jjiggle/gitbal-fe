@@ -29,7 +29,7 @@ export default function LoginCompletePage() {
 				<p className="mt-6 text-xl  text-greyBD">지금부터 깃발의 서비스를 즐겨보세요.</p>
 
 				<button
-					className=" mt-12 flex h-10 w-36 place-content-center place-items-center rounded bg-primary text-sm font-semibold text-white hover:bg-blue-400"
+					className=" mt-12 flex h-10 w-36 place-content-center place-items-center rounded bg-primary text-sm font-semibold text-white hover:bg-blue-400 focus:bg-blue-700"
 					onClick={() => navigate('/main-page')}>
 					깃발 시작하기
 				</button>

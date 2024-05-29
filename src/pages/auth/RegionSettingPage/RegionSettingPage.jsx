@@ -32,7 +32,7 @@ export default function RegionSettingPage() {
 					<br /> 지역정보는 서비스내 지역경쟁 콘텐츠에 사용됩니다.
 				</p>
 				<button
-					className={`mt-6 h-11 w-36 rounded bg-primary text-sm font-bold text-white ${
+					className={`mt-6 h-11 w-36 rounded bg-primary text-sm font-bold  text-white hover:bg-blue-400 focus:bg-blue-700 ${
 						isRegionFormValid() ? '' : 'pointer-events-none opacity-50' // 모든 필드가 채워졌을 때 버튼 활성화
 					}`}
 					onClick={() => navigate('/auth/complete')}>

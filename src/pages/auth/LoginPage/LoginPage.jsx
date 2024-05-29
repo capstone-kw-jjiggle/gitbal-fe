@@ -14,7 +14,7 @@ export default function LoginPage() {
 				<p className="mt-6 text-xl  text-greyBD">나의 코딩실력은? 우리학교 순위는? 우리 지역은?</p>
 				<p className="mt-4 text-lg text-primary">깃허브 계정을 연결하세요</p>
 				<button
-					className=" mt-4 flex h-10 w-36 place-content-center place-items-center rounded bg-primary text-sm font-semibold text-white hover:bg-blue-400"
+					className=" mt-4 flex h-10 w-36 place-content-center place-items-center rounded bg-primary text-sm font-semibold text-white hover:bg-blue-400 focus:bg-blue-700"
 					onClick={() => navigate('/auth/school')}>
 					Git 소셜로그인
 				</button>
