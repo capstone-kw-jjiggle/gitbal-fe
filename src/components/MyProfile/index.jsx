@@ -35,7 +35,7 @@ export default function MyProfile() {
 						)}
 						<p className="mt-4 text-sm  text-primary">지금 깃허브로 로그인하고 알아보기</p>
 						<button
-							className="mt-4 flex h-10 w-36 place-content-center place-items-center rounded bg-primary text-sm font-semibold text-white hover:bg-blue-400"
+							className="mt-4 flex h-10 w-36 place-content-center place-items-center rounded bg-primary text-sm font-semibold text-white hover:bg-blue-400 focus:bg-blue-700"
 							onClick={() => navigate('/auth/login')}>
 							지금 로그인하기
 						</button>
