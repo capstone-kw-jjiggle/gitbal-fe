@@ -40,7 +40,7 @@ export default function SchoolSettingPage() {
 			onSuccess: (data) => {
 				console.log(data);
 				alert('성공');
-				navigate(routes.auth.regionSetting, { state: { 메일인증정보: 메일인증정보 } });
+				navigate(routes.auth.regionSetting.replace(':univ', univName));
 			},
 			onError: (e) => {
 				console.error(e);

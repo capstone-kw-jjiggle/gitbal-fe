@@ -1,5 +1,11 @@
-import { getSchoolNames, getRegionNames, requestEmailAuthNumber, validateAuthNumber } from '@/api/auth/index';
+import { getSchoolNames, getRegionNames, requestEmailAuthNumber, validateAuthNumber, userJoin } from '@/api/auth/index';
 import { useMutation, useQuery } from '@tanstack/react-query';
+
+export const useUserJoin = () => {
+	return useMutation({
+		mutationFn: (joinData) => userJoin(joinData),
+	});
+};
 
 export const useGetSchoolNames = () => {
 	return useQuery({ queryKey: ['schoolNames'], queryFn: getSchoolNames });

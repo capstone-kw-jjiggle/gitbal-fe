@@ -1,4 +1,4 @@
-import { client } from '@/api/client';
+import { authClient, client } from '@/api/client';
 
 const AUTH_URL = {
 	JOIN: '/join',
@@ -9,11 +9,8 @@ const AUTH_URL = {
 };
 
 export const userJoin = async (joinData) => {
-	try {
-		await client.post(AUTH_URL.JOIN, joinData);
-	} catch (e) {
-		return Promise.reject(e);
-	}
+	const response = await authClient.post(AUTH_URL.JOIN, joinData);
+	return response;
 };
 
 export const getSchoolNames = async () => {
