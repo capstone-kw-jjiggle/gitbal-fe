@@ -3,7 +3,7 @@ import { Controller } from 'react-hook-form';
 
 const PLACE_HOLDER = '클릭하세요';
 
-export default function MyDropdownSelect({ optionsData, control }) {
+export default function DropdownSelect({ optionsData, control }) {
 	const customStyles = {
 		control: (baseStyles, state) => ({
 			...baseStyles,

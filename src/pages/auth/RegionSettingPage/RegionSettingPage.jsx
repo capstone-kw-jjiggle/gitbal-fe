@@ -4,10 +4,16 @@ import { useNavigate } from 'react-router-dom';
 import { useUserInfoStore } from '../../../stores/store';
 
 import MyDropdownSelect from '@/components/MyDropdownSelect';
+import { useGetRegionNames } from '@/api/auth/query';
+import { useForm } from 'react-hook-form';
 
 export default function RegionSettingPage() {
+	const { data: regionNamesData } = useGetRegionNames();
 	const [region, setRegion] = useState('');
 	const navigate = useNavigate();
+
+	const { control } = useForm();
+	let 지역이름배열 = [];
 
 	useEffect(() => {
 		console.log(region);
@@ -29,7 +35,7 @@ export default function RegionSettingPage() {
 				지금 <span className="font-bold">소속 지역</span>을 설정하세요.
 			</p>
 			<form className="mx-auto flex w-11/12 flex-col items-center">
-				<MyDropdownSelect placeholder={'클릭하세요'} onSelectChange={handleSelectValueRegion} optionsData={options} />
+				<MyDropdownSelect optionsData={regionNames} control={control} />
 				<p className=" mt-5 w-full text-sm text-black19">
 					본인이 거주 및 출생한 지역을 자유롭게 선택할 수 있습니다.
 					<br /> 지역정보는 서비스내 지역경쟁 콘텐츠에 사용됩니다.
