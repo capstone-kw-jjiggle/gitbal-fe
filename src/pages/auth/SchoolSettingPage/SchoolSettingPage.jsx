@@ -40,7 +40,7 @@ export default function SchoolSettingPage() {
 			onSuccess: (data) => {
 				console.log(data);
 				alert('성공');
-				navigate(routes.auth.regionSetting.replace(':univ', univName));
+				navigate(routes.auth.regionSetting.replace(':univName', univName));
 			},
 			onError: (e) => {
 				console.error(e);

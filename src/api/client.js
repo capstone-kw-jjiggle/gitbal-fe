@@ -20,9 +20,9 @@ const authClient = axios.create(authAxiosConfig);
 
 authClient.interceptors.request.use(
 	async (config) => {
-		const token = getAuthHeader();
-		if (token) {
-			config.headers.Authorization = token;
+		const accessToken = getAuthHeader();
+		if (accessToken) {
+			config.headers.Authorization = `Bearer ${accessToken}`;
 		} else {
 			console.error('토큰이 없습니다. 로그인이 필요합니다.');
 			window.location.replace('/');

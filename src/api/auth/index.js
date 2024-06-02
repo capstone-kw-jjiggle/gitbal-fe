@@ -1,7 +1,7 @@
 import { authClient, client } from '@/api/client';
 
 const AUTH_URL = {
-	JOIN: '/join',
+	JOIN: '/auth/join',
 	GET_SCHOOL_LIST: '/info/schoolNames',
 	GET_REGION_LIST: '/info/regionNames',
 	POST_EMAIL_AUTH: '/univ/certificate',
