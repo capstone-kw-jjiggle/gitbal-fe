@@ -8,6 +8,8 @@ export default function Footer() {
 		<>
 			{location.pathname === '/Loading-page' ? (
 				<></>
+			) : location.pathname === '/mobile-banned-page' ? (
+				<></>
 			) : (
 				<footer className=" my-auto flex h-28 w-full flex-col justify-center text-sm text-grey69">
 					<div className=" w-full">

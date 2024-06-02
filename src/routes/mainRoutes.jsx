@@ -11,6 +11,7 @@ import SchoolPage from '@/pages/SchoolPage/SchoolPage';
 import MainPage from '@/pages/MainPage/MainPage';
 import MyPage from '@/pages/MyPage/MyPage';
 import LoadingPage from '@/pages/LoadingPage/LoadingPage';
+import MobileBannedPage from '@/pages/MobileBannedPage/MobileBannedPage';
 
 export const mainRoutes = {
 	path: '/',
@@ -51,6 +52,10 @@ export const mainRoutes = {
 		{
 			path: routes.loadingPage,
 			element: <LoadingPage />,
+		},
+		{
+			path: routes.mobileBanned,
+			element: <MobileBannedPage />,
 		},
 	],
 };
