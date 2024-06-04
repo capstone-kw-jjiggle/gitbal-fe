@@ -29,7 +29,6 @@ export default function SchoolPage() {
 	const { data: schoolRankData } = useGetSchoolList(page, keyword);
 	const schoolRankList = schoolRankData ? schoolRankData.data.schoolList : [];
 	const totalPages = schoolRankData ? schoolRankData.data.totalPages : 0;
-	console.log(schoolRankData);
 
 	const handle현재페이지변경 = (page) => {
 		searchParams.set('page', page);
