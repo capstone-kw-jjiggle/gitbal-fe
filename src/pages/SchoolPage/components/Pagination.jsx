@@ -3,9 +3,9 @@ import PageNumber from '@/pages/SchoolPage/components/PageNumber';
 import PageNavigationButton from '@/pages/SchoolPage/components/PageNavigationButton';
 
 export default function Pagination({ totalPages, currentPage, onSetCurrentPage }) {
-	const [currentSet, setCurrentSet] = useState(1);
-
 	const btnRange = Math.min(10, totalPages);
+	const [currentSet, setCurrentSet] = useState(Math.ceil(currentPage / btnRange));
+
 	const maxPageNumberVisible = btnRange;
 	const maxSet = Math.ceil(totalPages / maxPageNumberVisible);
 

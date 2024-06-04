@@ -18,6 +18,7 @@ const authAxiosConfig = {
 const client = axios.create(axiosConfig);
 const authClient = axios.create(authAxiosConfig);
 
+// 요청인터셉터
 authClient.interceptors.request.use(
 	async (config) => {
 		const accessToken = getAuthHeader();
@@ -33,5 +34,8 @@ authClient.interceptors.request.use(
 		console.error(error);
 	},
 );
+
+// 응답인터셉터
+// authClient.interceptors.response.use(async (error) => {});
 
 export { client, authClient };

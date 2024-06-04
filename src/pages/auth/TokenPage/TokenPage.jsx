@@ -12,8 +12,13 @@ export default function TokenPage() {
 
 	useEffect(() => {
 		const accessToken = query.get('accessToken');
+		const isRegistered = query.get('isRegistered');
+
 		if (accessToken) {
 			localStorage.setItem('accessToken', accessToken);
+
+			if (isRegistered) navigate('/', { replace: true });
+
 			navigate(routes.auth.schoolSetting);
 		}
 	}, [query, navigate]);

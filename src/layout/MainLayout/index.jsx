@@ -11,7 +11,9 @@ export default function MainLayout() {
 					<Header />
 				</div>
 			</div>
-			<Outlet />
+			<div className="min-h-screen flex-grow">
+				<Outlet />
+			</div>
 			<div className=" relative  mt-16 w-screen bg-greyD9">
 				<div className=" container mx-auto w-3/5">
 					<Footer />

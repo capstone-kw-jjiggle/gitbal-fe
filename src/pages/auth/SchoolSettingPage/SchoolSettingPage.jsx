@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
@@ -48,13 +47,6 @@ export default function SchoolSettingPage() {
 			},
 		});
 	};
-
-	const value = watch();
-
-	useEffect(() => {
-		console.log(value);
-		console.log(!!selectedOption);
-	}, [value]);
 
 	return (
 		<div className="mx-auto my-auto flex w-5/12 flex-col items-center text-black19">

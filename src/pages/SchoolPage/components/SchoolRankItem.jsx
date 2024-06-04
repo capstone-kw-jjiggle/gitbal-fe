@@ -9,22 +9,22 @@ export default function SchoolRankItem({ rank, schoolName, score, mvpId, scoreIn
 	let imageUrl;
 
 	switch (level) {
-		case 1:
+		case 'YELLOW':
 			imageUrl = level1;
 			break;
-		case 2:
+		case 'GREEN':
 			imageUrl = level2;
 			break;
-		case 3:
+		case 'BLUE':
 			imageUrl = level3;
 			break;
-		case 4:
+		case 'RED':
 			imageUrl = level4;
 			break;
-		case 5:
+		case 'GREY':
 			imageUrl = level5;
 			break;
-		case 6:
+		case 'PURPLE':
 			imageUrl = level6;
 			break;
 		default:
