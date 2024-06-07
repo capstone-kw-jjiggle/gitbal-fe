@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 import Divider from '@components/Divider';
@@ -8,38 +9,29 @@ import MyProfile from '@components/MyProfile';
 
 import Pagination from '@/pages/SchoolPage/components/Pagination';
 import SchoolRankList from '@/pages/SchoolPage/components/SchoolRankList';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useGetSchoolList, useGetSchoolWinner } from '@/api/school/query';
-import { routes } from '@/constants/routes';
 
 export default function SchoolPage() {
-	const navigate = useNavigate();
+	const [page, setPage] = useState(1);
+	const [currentKeyword, setCurrentKeyword] = useState('');
 
 	const { register, getValues, handleSubmit } = useForm();
 
-	// url을 통해서 page 정보 / 검색 keyword 정보를 받아옴
-	const location = useLocation();
-	const searchParams = new URLSearchParams(location.search);
-	const page = searchParams.get('page') || '1';
-	const keyword = searchParams.get('keyword') || '';
-
 	const { data: schoolWinnerData, isLoading } = useGetSchoolWinner();
-	const schoolWinnerInfo = schoolWinnerData ? schoolWinnerData.data : {};
+	const schoolWinnerInfo = schoolWinnerData?.data || {};
 
-	const { data: schoolRankData } = useGetSchoolList(page, keyword);
+	const { data: schoolRankData } = useGetSchoolList(page, currentKeyword);
 	const schoolRankList = schoolRankData ? schoolRankData.data.schoolList : [];
 	const totalPages = schoolRankData ? schoolRankData.data.totalPages : 0;
 
 	const handle현재페이지변경 = (page) => {
-		searchParams.set('page', page);
-		navigate(`${routes.school}?${searchParams.toString()}`, { replace: true });
+		setPage(page);
 	};
 
 	const on검색어입력 = () => {
 		const keyword = getValues('keyword', '');
-		searchParams.set('keyword', keyword);
-		searchParams.set('page', '1');
-		navigate(`${routes.school}?${searchParams.toString()}`, { replace: true });
+		setCurrentKeyword(keyword);
 	};
 
 	return (

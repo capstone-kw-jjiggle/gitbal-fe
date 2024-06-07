@@ -8,11 +8,9 @@ export const useGetSchoolList = (page, keyword) => {
 		keepPreviousData: true,
 		onSuccess: (data) => {
 			console.log(data);
-			alert('성공');
 		},
 		onError: (e) => {
 			console.error(e);
-			alert('실패');
 		},
 	});
 };
@@ -23,11 +21,9 @@ export const useGetSchoolWinner = () => {
 		queryFn: () => getSchoolWinner(),
 		onSuccess: (data) => {
 			console.log(data);
-			alert('성공');
 		},
 		onError: (e) => {
 			console.error(e);
-			alert('실패');
 		},
 	});
 };
