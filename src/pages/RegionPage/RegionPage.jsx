@@ -6,8 +6,15 @@ import RegionRankList from '@/pages/RegionPage/components/RegionRankList';
 
 import { MyRegionCard, RegionWinnerCard } from '@components/Cards';
 import level4 from '@/assets/images/regionLevel/regionLevel4.svg'; //임시
+import { useGetRegionList, useGetRegionWinner } from '@/api/region/query';
 
 export default function RegionPage() {
+	const { data: regionRankListData } = useGetRegionList();
+	const regionRankList = regionRankListData ? regionRankListData.data.regionList : [];
+
+	const { data: regionWinnerData } = useGetRegionWinner();
+	const regionWinner = regionWinnerData?.data || {};
+
 	return (
 		<>
 			<MainContainer>
@@ -18,12 +25,10 @@ export default function RegionPage() {
 					</div>
 					<MyRegionCard imgSrc={level4} />
 				</div>
-				<RegionWinnerCard />
+				{regionWinnerData && <RegionWinnerCard regionWinner={regionWinner} />}
 			</MainContainer>
 			<Divider />
-			<MainContainer>
-				<RegionRankList />
-			</MainContainer>
+			<MainContainer>{regionRankListData && <RegionRankList regionRankList={regionRankList} />}</MainContainer>
 		</>
 	);
 }

@@ -5,11 +5,9 @@ const MAIN_URL = {
 	GET_WINNER: '/mainPage/firstRank',
 };
 
-
-
 export const getUserList = async (page, keyword) => {
 	const response = await client.get(MAIN_URL.GET_USER_LIST, {
-		params: { page, ...(keyword ? { searchedSchoolName: keyword } : {}) },
+		params: { page, ...(keyword ? { searchedname: keyword } : {}) },
 	});
 	return response;
 };
