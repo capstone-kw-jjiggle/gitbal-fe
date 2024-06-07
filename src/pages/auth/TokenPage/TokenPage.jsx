@@ -1,12 +1,15 @@
-import { useLocation, useNavigate } from 'react-router-dom';
-import { routes } from '../../../constants/routes';
 import { useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+
+import { routes } from '@/constants/routes';
+import useAuthStore from '@/stores/authStore';
 
 function useQuery() {
 	return new URLSearchParams(useLocation().search);
 }
 
 export default function TokenPage() {
+	const { login } = useAuthStore();
 	const query = useQuery();
 	const navigate = useNavigate();
 
@@ -16,12 +19,12 @@ export default function TokenPage() {
 
 		if (accessToken) {
 			localStorage.setItem('accessToken', accessToken);
-
+			login();
 			if (isRegistered) navigate('/', { replace: true });
 
 			navigate(routes.auth.schoolSetting);
 		}
-	}, [query, navigate]);
+	}, []);
 
 	return (
 		<div>

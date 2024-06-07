@@ -10,8 +10,10 @@ import MyProfile from '@components/MyProfile';
 import Pagination from '@/components/Pagination/Pagination';
 import SchoolRankList from '@/pages/SchoolPage/components/SchoolRankList';
 import { useGetSchoolList, useGetSchoolWinner } from '@/api/school/query';
+import useAuthStore from '@/stores/authStore';
 
 export default function SchoolPage() {
+	const { isLoggedIn } = useAuthStore();
 	const [page, setPage] = useState(1);
 	const [currentKeyword, setCurrentKeyword] = useState('');
 
@@ -37,11 +39,17 @@ export default function SchoolPage() {
 		<>
 			<MainContainer className="h-[553px]">
 				<div className="mt-8 flex w-full items-start justify-between text-black19">
-					<div className="flex w-1/2 flex-col">
-						<RankTitle title={'학교 랭킹'} daysLeft={'100'} />
-						<MyProfile />
-					</div>
-					<MySchoolCard />
+					{isLoggedIn ? (
+						<>
+							<div className="flex w-1/2 flex-col">
+								<RankTitle title={'학교 랭킹'} daysLeft={'100'} />
+								<MyProfile />
+							</div>
+							<MySchoolCard />
+						</>
+					) : (
+						<div>로그인 해주세요</div>
+					)}
 				</div>
 				{isLoading ? <div>로딩중</div> : <SchoolWinnerCard schoolWinnerInfo={schoolWinnerInfo} />}
 			</MainContainer>

@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import { routes } from '@/constants/routes';
 import SchoolSettingInput from '@/pages/auth/SchoolSettingPage/components/SchoolSettingInput';
 import DropdownSelect from '@/components/DropdownSelect/DropdownSelect';
-import { 객체배열로변환하는함수 } from '@/utils/convertArrayToObjectArray';
+import 객체배열로변환하는함수 from '@/utils/convertArrayToObjectArray';
 import { useGetSchoolNames, useRequestAuthNumber, useValidateAuthNumber } from '@/api/auth/query';
 
 const 플레이스홀더 = {

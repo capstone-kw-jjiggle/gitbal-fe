@@ -2,8 +2,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 import { useGetRegionNames, useUserJoin } from '@/api/auth/query';
 import { useForm } from 'react-hook-form';
-import { 객체배열로변환하는함수 } from '@/utils/convertArrayToObjectArray';
-import { routes } from '@/constants/routes';
+import 객체배열로변환하는함수 from '@/utils/convertArrayToObjectArray';
 import DropdownSelect from '@/components/DropdownSelect/DropdownSelect';
 
 export default function RegionSettingPage() {
@@ -22,7 +21,6 @@ export default function RegionSettingPage() {
 	if (regionNamesData) {
 		지역이름배열 = 객체배열로변환하는함수(regionNamesData.data);
 	}
-	console.log(univName);
 
 	const 회원가입정보객체 = {
 		univName: univName,
@@ -34,7 +32,7 @@ export default function RegionSettingPage() {
 			onSuccess: (data) => {
 				console.log(data);
 				alert('성공');
-				navigate(routes.auth.loginCompletePage);
+				// navigate(routes.auth.loginCompletePage);
 			},
 			onError: (e) => {
 				console.error(e);
