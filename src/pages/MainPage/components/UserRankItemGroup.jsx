@@ -1,5 +1,4 @@
 import UserRankItem from '@/pages/MainPage/components/UserRankItem';
-import { rankList } from '@/pages/MainPage/data/mock';
 
 export default function UserRankItemGroup({ userList }) {
 	return (

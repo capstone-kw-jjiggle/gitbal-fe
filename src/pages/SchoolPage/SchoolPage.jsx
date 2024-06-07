@@ -7,9 +7,8 @@ import { MySchoolCard, SchoolWinnerCard } from '@components/Cards';
 import RankTitle from '@components/RankTitle';
 import MyProfile from '@components/MyProfile';
 
-import Pagination from '@/pages/SchoolPage/components/Pagination';
+import Pagination from '@/components/Pagination/Pagination';
 import SchoolRankList from '@/pages/SchoolPage/components/SchoolRankList';
-import { useNavigate } from 'react-router-dom';
 import { useGetSchoolList, useGetSchoolWinner } from '@/api/school/query';
 
 export default function SchoolPage() {
