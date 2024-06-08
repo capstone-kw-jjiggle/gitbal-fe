@@ -9,8 +9,11 @@ import MyProfile from '@components/MyProfile';
 
 import Pagination from '@/components/Pagination/Pagination';
 import SchoolRankList from '@/pages/SchoolPage/components/SchoolRankList';
-import { useGetSchoolList, useGetSchoolWinner } from '@/api/school/query';
+import { useGetSchoolList, useGetSchoolWinner, useGetUserSchoolInfo } from '@/api/school/query';
 import useAuthStore from '@/stores/authStore';
+import { useGetUserInfo } from '@/api/auth/query';
+import { DomainInfoCard } from '@/components/Cards/DomainInfoCard';
+import getLevelImage from '@/utils/getLevelImage';
 
 export default function SchoolPage() {
 	const { isLoggedIn } = useAuthStore();
@@ -25,6 +28,14 @@ export default function SchoolPage() {
 	const { data: schoolRankData } = useGetSchoolList(page, currentKeyword);
 	const schoolRankList = schoolRankData ? schoolRankData.data.schoolList : [];
 	const totalPages = schoolRankData ? schoolRankData.data.totalPages : 0;
+
+	const { data: userInfoData } = useGetUserInfo();
+	const userInfo = userInfoData?.data || {};
+	const { level } = userInfo?.mySchoolGrade || {};
+	const levelImage = getLevelImage(level);
+
+	const { data: userSchoolInfoData } = useGetUserSchoolInfo();
+	const userSchoolInfo = userSchoolInfoData?.data || {};
 
 	const handle현재페이지변경 = (page) => {
 		setPage(page);
@@ -43,9 +54,11 @@ export default function SchoolPage() {
 						<>
 							<div className="flex w-1/2 flex-col">
 								<RankTitle title={'학교 랭킹'} daysLeft={'100'} />
-								<MyProfile />
+								{userInfoData && <MyProfile userInfo={userInfo} />}
 							</div>
-							<MySchoolCard />
+							{userSchoolInfoData && (
+								<DomainInfoCard title={'학교'} domainData={userSchoolInfo} levelImage={levelImage} />
+							)}
 						</>
 					) : (
 						<div>로그인 해주세요</div>

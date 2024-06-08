@@ -8,6 +8,7 @@ import { MyRegionCard, RegionWinnerCard } from '@components/Cards';
 import level4 from '@/assets/images/regionLevel/regionLevel4.svg'; //임시
 import { useGetRegionList, useGetRegionWinner } from '@/api/region/query';
 import useAuthStore from '@/stores/authStore';
+import { useGetUserInfo } from '@/api/auth/query';
 
 export default function RegionPage() {
 	const { isLoggedIn } = useAuthStore();
@@ -18,6 +19,9 @@ export default function RegionPage() {
 	const { data: regionWinnerData } = useGetRegionWinner();
 	const regionWinner = regionWinnerData?.data || {};
 
+	const { data: userInfoData } = useGetUserInfo();
+	const userInfo = userInfoData?.data || {};
+
 	return (
 		<>
 			<MainContainer>
@@ -26,7 +30,7 @@ export default function RegionPage() {
 						<>
 							<div className="flex w-1/2 flex-col">
 								<RankTitle title={'지역 랭킹'} daysLeft={'100'} />
-								<MyProfile />
+								{userInfoData && <MyProfile userInfo={userInfo} />}
 							</div>
 							<MyRegionCard imgSrc={level4} />
 						</>

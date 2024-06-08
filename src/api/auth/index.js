@@ -2,6 +2,7 @@ import { authClient, client } from '@/api/client';
 
 const AUTH_URL = {
 	JOIN: '/auth/join',
+	GET_USER_INFO: '/auth/userInfo',
 	GET_SCHOOL_LIST: '/info/schoolNames',
 	GET_REGION_LIST: '/info/regionNames',
 	POST_EMAIL_AUTH: '/univ/certificate',
@@ -30,5 +31,10 @@ export const requestEmailAuthNumber = async (univData) => {
 
 export const validateAuthNumber = async (authNumber) => {
 	const response = await client.post(AUTH_URL.POST_EMAIL_VALIDATE, authNumber);
+	return response;
+};
+
+export const getUserInfo = async () => {
+	const response = await authClient.get(AUTH_URL.GET_USER_INFO);
 	return response;
 };

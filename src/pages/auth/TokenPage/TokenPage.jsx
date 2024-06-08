@@ -21,8 +21,7 @@ export default function TokenPage() {
 			localStorage.setItem('accessToken', accessToken);
 			login();
 			if (isRegistered) navigate('/', { replace: true });
-
-			navigate(routes.auth.schoolSetting);
+			else navigate(routes.auth.schoolSetting);
 		}
 	}, []);
 
