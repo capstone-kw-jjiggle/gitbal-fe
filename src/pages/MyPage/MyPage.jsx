@@ -12,6 +12,8 @@ import RankInfo from '@/pages/MyPage/components/RankInfo/RankInfo';
 
 import { routes } from '@/constants/routes';
 
+import { useGetUserInfo } from '@/api/auth/query';
+
 import useAuthStore from '@/stores/authStore';
 
 const 버튼에따른컴포넌트 = {
@@ -25,6 +27,10 @@ export default function MyPage() {
 	const navigate = useNavigate();
 	const { isLoggedIn } = useAuthStore();
 
+	const { data: userInfoData } = useGetUserInfo({ enabled: isLoggedIn });
+	const userInfo = userInfoData?.data || {};
+	const githubID = userInfo?.userName || '';
+
 	useEffect(() => {
 		if (!isLoggedIn) navigate(routes.auth.login);
 	}, []);
@@ -37,8 +43,8 @@ export default function MyPage() {
 		<>
 			<MainContainer>
 				<div className="mb-14 mt-16 flex items-center justify-between">
-					<MyProfile />
-					<Shortcut />
+					{userInfoData && <MyProfile userInfo={userInfo} />}
+					<Shortcut githubID={githubID} />
 				</div>
 			</MainContainer>
 			<Divider 현재선택된버튼={현재선택된버튼} onClick={handle버튼클릭} />

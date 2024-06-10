@@ -26,7 +26,7 @@ authClient.interceptors.request.use(
 			config.headers.Authorization = `Bearer ${accessToken}`;
 		} else {
 			console.error('토큰이 없습니다. 로그인이 필요합니다.');
-			window.location.replace('/');
+			window.location.replace('/auth/login');
 		}
 		return config;
 	},

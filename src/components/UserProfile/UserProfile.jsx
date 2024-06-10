@@ -2,8 +2,6 @@ import { LargeProfileImage } from '@components/ProfileImage';
 
 import levelImage from '@/assets/images/userLevel/userLevel3.svg';
 
-import useAuthStore from '@/stores/authStore';
-
 export default function UserProfile() {
 	return (
 		<div className="mt-3 flex">

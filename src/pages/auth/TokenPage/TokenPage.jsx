@@ -20,8 +20,11 @@ export default function TokenPage() {
 		if (accessToken) {
 			localStorage.setItem('accessToken', accessToken);
 			login();
-			if (isRegistered) navigate('/', { replace: true });
-			else navigate(routes.auth.schoolSetting);
+			if (isRegistered === 'true') {
+				navigate('/', { replace: true });
+			} else {
+				navigate(routes.auth.schoolSetting);
+			}
 		}
 	}, []);
 

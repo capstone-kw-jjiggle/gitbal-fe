@@ -16,9 +16,10 @@ export const useGetSchoolWinner = () => {
 	});
 };
 
-export const useGetUserSchoolInfo = () => {
+export const useGetUserSchoolInfo = ({ enabled = false }) => {
 	return useQuery({
 		queryKey: ['userSchool'],
 		queryFn: getUserSchoolInfo,
+		enabled: enabled,
 	});
 };

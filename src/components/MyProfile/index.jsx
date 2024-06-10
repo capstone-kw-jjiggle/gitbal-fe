@@ -1,11 +1,12 @@
 import { LargeProfileImage } from '@components/ProfileImage';
-import levelImage from '@/assets/images/userLevel/userLevel3.svg';
+import getLevelImage from '@/utils/getLevelImage';
 
 export default function MyProfile({ userInfo }) {
-	const { userName, univName, regionName, imagName } = userInfo;
+	const { userName, univName, regionName, imgUrl, grade } = userInfo;
+	const levelImage = getLevelImage(grade);
 	return (
 		<div className="mt-3 flex">
-			<LargeProfileImage imageURL={imagName} />
+			<LargeProfileImage imageURL={imgUrl} />
 			<div className="ml-8 flex flex-col justify-center gap-1 text-xl font-extrabold">
 				<p className="font-bold text-primary">&quot;부지런히&quot; + &quot;열일하는&quot;</p>
 				<div className="mt-1 flex">

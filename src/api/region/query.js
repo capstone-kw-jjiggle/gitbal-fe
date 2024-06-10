@@ -15,9 +15,10 @@ export const useGetRegionWinner = () => {
 	});
 };
 
-export const useGetUserRegionInfo = () => {
+export const useGetUserRegionInfo = ({ enabled = false }) => {
 	return useQuery({
 		queryKey: ['userRegion'],
 		queryFn: getUserRegionInfo,
+		enabled: enabled,
 	});
 };

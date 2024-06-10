@@ -42,9 +42,10 @@ export const useValidateAuthNumber = () => {
 	});
 };
 
-export const useGetUserInfo = () => {
+export const useGetUserInfo = ({ enabled = false }) => {
 	return useQuery({
 		queryKey: ['userInfo'],
 		queryFn: getUserInfo,
+		enabled: enabled,
 	});
 };

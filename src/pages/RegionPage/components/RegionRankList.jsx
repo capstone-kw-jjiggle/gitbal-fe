@@ -7,7 +7,7 @@ import RegionRankDivider from '@/pages/RegionPage/components/RegionRankDivider';
 
 export default function RegionRankList({ regionRankList }) {
 	const { regionlName, regionScore, regionChangedScore, topContributorName } = regionRankList[0];
-	console.log(regionlName);
+
 	return (
 		<>
 			<div className="mt-8 ">

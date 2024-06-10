@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 
 import Divider from '@components/Divider';
 import MainContainer from '@components/MainContainer';
-import { MySchoolCard, SchoolWinnerCard } from '@components/Cards';
+import { SchoolWinnerCard } from '@components/Cards';
 import RankTitle from '@components/RankTitle';
 import MyProfile from '@components/MyProfile';
 
@@ -28,14 +28,17 @@ export default function SchoolPage() {
 	const { data: schoolRankData } = useGetSchoolList(page, currentKeyword);
 	const schoolRankList = schoolRankData ? schoolRankData.data.schoolList : [];
 	const totalPages = schoolRankData ? schoolRankData.data.totalPages : 0;
+	console.log(schoolRankList);
 
-	const { data: userInfoData } = useGetUserInfo();
+	const { data: userInfoData } = useGetUserInfo({ enabled: isLoggedIn });
 	const userInfo = userInfoData?.data || {};
-	const { level } = userInfo?.mySchoolGrade || {};
-	const levelImage = getLevelImage(level);
 
-	const { data: userSchoolInfoData } = useGetUserSchoolInfo();
+	const { data: userSchoolInfoData } = useGetUserSchoolInfo({ enabled: isLoggedIn });
 	const userSchoolInfo = userSchoolInfoData?.data || {};
+
+	const { mySchoolGrade, mySchoolName, mySchoolRank, totalSchoolScore, mvpName, mvpTotalScore } =
+		userSchoolInfoData?.data || {};
+	const schoolLevelImage = getLevelImage(mySchoolGrade);
 
 	const handle현재페이지변경 = (page) => {
 		setPage(page);
@@ -57,7 +60,16 @@ export default function SchoolPage() {
 								{userInfoData && <MyProfile userInfo={userInfo} />}
 							</div>
 							{userSchoolInfoData && (
-								<DomainInfoCard title={'학교'} domainData={userSchoolInfo} levelImage={levelImage} />
+								<DomainInfoCard
+									title={'학교'}
+									domainData={userSchoolInfo}
+									mvpName={mvpName}
+									mvpTotalScore={mvpTotalScore}
+									domainName={mySchoolName}
+									domainRank={mySchoolRank}
+									totalDomainScore={totalSchoolScore}
+									levelImage={schoolLevelImage}
+								/>
 							)}
 						</>
 					) : (
