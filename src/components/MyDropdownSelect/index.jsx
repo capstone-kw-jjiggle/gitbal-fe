@@ -1,13 +1,9 @@
-import { useState } from 'react';
 import Select from 'react-select';
+import { Controller } from 'react-hook-form';
 
-export default function MyDropdownSelect({ placeholder, onSelectChange, optionsData }) {
-	const [value, setValue] = useState('');
+const PLACE_HOLDER = '클릭하세요';
 
-	const handleSelectOption = (selectedOption) => {
-		onSelectChange(selectedOption);
-	};
-
+export default function MyDropdownSelect({ optionsData, control }) {
 	const customStyles = {
 		control: (baseStyles, state) => ({
 			...baseStyles,
@@ -44,13 +40,22 @@ export default function MyDropdownSelect({ placeholder, onSelectChange, optionsD
 
 	return (
 		<div className=" mt-8 w-full">
-			<Select
-				onChange={handleSelectOption}
-				styles={customStyles}
-				options={optionsData}
-				defaultValue={value}
-				placeholder={placeholder}
-				noOptionsMessage={() => '찾으시는 대학교가 없습니다.'}
+			<Controller
+				name="selectedOption"
+				control={control}
+				defaultValue=""
+				render={({ field }) => (
+					<Select
+						{...field}
+						styles={customStyles}
+						options={optionsData}
+						placeholder={PLACE_HOLDER}
+						noOptionsMessage={() => '찾으시는 대학교가 없습니다.'}
+						onChange={(selectedOption) => {
+							field.onChange(selectedOption);
+						}}
+					/>
+				)}
 			/>
 		</div>
 	);

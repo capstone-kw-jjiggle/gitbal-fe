@@ -4,6 +4,7 @@ import LoginPage from '../pages/auth/LoginPage/LoginPage';
 import SchoolSettingPage from '../pages/auth/SchoolSettingPage/SchoolSettingPage';
 import RegionSettingPage from '../pages/auth/RegionSettingPage/RegionSettingPage';
 import LoginCompletePage from '../pages/auth/LoginCompletePage/LoginCompletePage';
+import TokenPage from '../pages/auth/TokenPage/TokenPage';
 
 export const loginRoutes = {
 	path: '/',
@@ -24,6 +25,10 @@ export const loginRoutes = {
 		{
 			path: routes.auth.loginCompletePage,
 			element: <LoginCompletePage />,
+		},
+		{
+			path: routes.auth.tokenPage,
+			element: <TokenPage />,
 		},
 	],
 };

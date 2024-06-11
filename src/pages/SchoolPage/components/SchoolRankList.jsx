@@ -1,18 +1,17 @@
 import SchoolRankItem from '@/pages/SchoolPage/components/SchoolRankItem';
-import { schoolRankData } from '@/pages/SchoolPage/data/mock';
 
-export default function SchoolRankList() {
+export default function SchoolRankList({ schoolRankList }) {
 	return (
-		<div className="mt-12 flex w-full flex-col gap-4">
-			{schoolRankData.map((item) => (
+		<div className="flex w-full flex-col gap-4">
+			{schoolRankList.map((item) => (
 				<SchoolRankItem
-					key={item.rank}
-					rank={item.rank}
+					key={item.schoolName}
+					rank={item.schoolRank}
 					schoolName={item.schoolName}
-					score={item.score}
-					mvpId={item.mvpId}
-					scoreIncrease={item.scoreIncrease}
-					level={item.level}
+					score={item.schoolScore}
+					mvpId={item.topContributorName}
+					scoreIncrease={item.schoolChangedScore}
+					level={item.schoolGrade}
 				/>
 			))}
 		</div>

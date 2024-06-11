@@ -1,6 +1,7 @@
 import level4 from './../../../assets/images/regionLevel/regionLevel4.svg';
 
-export const RegionWinnerCard = () => {
+export const RegionWinnerCard = ({ regionWinner }) => {
+	const { regionName, regionScore, regionChangeScore, mvpName } = regionWinner;
 	return (
 		<>
 			<div className="mt-8 flex w-full items-center justify-between rounded-2xl border border-gray-200 px-12 py-6 text-black19 shadow-lg">
@@ -8,19 +9,19 @@ export const RegionWinnerCard = () => {
 				<div className="flex w-1/2 ">
 					<div className="mt-6 flex w-full flex-col">
 						<div className="flex justify-between text-2xl">
-							<p className="font-bold">경기도</p>
-							<p>3,131,232점</p>
+							<p className="font-bold">{regionName}</p>
+							<p>{regionScore.toLocaleString()}점</p>
 						</div>
 						<hr className="my-2 w-full rounded-2xl border-b-4 border-primary" />
 						<div className="flex justify-end">
 							<p>MVP</p>
-							<p className="ml-4 text-primary">suwonthugger</p>
+							<p className="ml-4 text-primary">{mvpName}</p>
 						</div>
 					</div>
 				</div>
 				<div>
 					<p>지역 점수 상승</p>
-					<p className="text-green-500">+23,112점</p>
+					<p className="text-green-500">+{+regionChangeScore}점</p>
 				</div>
 				<div>
 					<img src={level4} className="ml-2 h-20 w-20" />
