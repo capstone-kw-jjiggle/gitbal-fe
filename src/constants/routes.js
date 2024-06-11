@@ -11,7 +11,8 @@ export const routes = {
 	auth: {
 		login: '/auth/login',
 		schoolSetting: '/auth/school',
-		regionSetting: '/auth/region',
+		regionSetting: '/auth/region/:univName',
 		loginCompletePage: '/auth/complete',
+		tokenPage: '/auth/token',
 	},
 };
