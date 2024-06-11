@@ -2,9 +2,11 @@ import { authClient, client } from '@/api/client';
 
 const AUTH_URL = {
 	JOIN: '/auth/join',
+
 	GET_USER_INFO: '/auth/userInfo',
 	GET_SCHOOL_LIST: '/info/schoolNames',
 	GET_REGION_LIST: '/info/regionNames',
+
 	POST_EMAIL_AUTH: '/univ/certificate',
 	POST_EMAIL_VALIDATE: '/univ/validate',
 };

@@ -6,8 +6,6 @@ import RegionRank5th from '@/pages/RegionPage/components/RegionRank5th';
 import RegionRankDivider from '@/pages/RegionPage/components/RegionRankDivider';
 
 export default function RegionRankList({ regionRankList }) {
-	const { regionlName, regionScore, regionChangedScore, topContributorName } = regionRankList[0];
-
 	return (
 		<>
 			<div className="mt-8 ">

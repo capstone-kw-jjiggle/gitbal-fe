@@ -1,6 +1,6 @@
 import ScoreChart from '@/pages/MyPage/components/RankInfo/ScoreChart';
 
-export default function ChartCard({ title, name, rank }) {
+export default function ChartCard({ title, name, rank, data }) {
 	return (
 		<div className="h-76 mb-8 flex w-full items-center rounded-2xl border border-gray-200 p-4 text-black19 shadow-lg">
 			<div className="flex h-60 w-5/12 flex-col">
@@ -13,7 +13,7 @@ export default function ChartCard({ title, name, rank }) {
 				</div>
 			</div>
 			<div className="flex h-60 w-7/12">
-				<ScoreChart />
+				<ScoreChart data={data} />
 			</div>
 		</div>
 	);
