@@ -8,12 +8,7 @@ const SchoolSettingInput = forwardRef(({ placeholder, type, register }, ref) => 
 				ref={ref}
 				placeholder={placeholder}
 				type={type}
-<<<<<<< HEAD
-				value={value}
-				onChange={onChange}
-=======
 				{...register}
->>>>>>> feat/#54/axios-instance-login
 			/>
 		</>
 	);
