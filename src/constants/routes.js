@@ -6,6 +6,8 @@ export const routes = {
 	myPage: '/my-page',
 	privacy: '/privacy-page',
 	tos: '/tos-page',
+	loadingPage: '/loading-page',
+	mobileBanned: '/mobile-banned-page',
 	auth: {
 		login: '/auth/login',
 		schoolSetting: '/auth/school',

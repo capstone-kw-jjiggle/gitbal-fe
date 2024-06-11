@@ -31,6 +31,7 @@ export default function MyPage() {
 				</div>
 			</MainContainer>
 			<Divider 현재선택된버튼={현재선택된버튼} onClick={handle버튼클릭} />
+
 			<MainContainer>{버튼에따른컴포넌트[현재선택된버튼]}</MainContainer>
 		</>
 	);

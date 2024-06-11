@@ -1,4 +1,4 @@
-export default function SchoolSettingInput({ placeholder, type, value, onChange, ...props }) {
+export default function SchoolChangeInput({ placeholder, type, value, onChange, ...props }) {
 	return (
 		<>
 			<input

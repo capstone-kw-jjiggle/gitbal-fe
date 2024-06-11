@@ -3,13 +3,15 @@ import { Navigate } from 'react-router-dom';
 import MainLayout from '../layout/MainLayout';
 import { routes } from '../constants/routes';
 
-import AboutPage from '../pages/AboutPage/AboutPage';
-import PrivacyPage from '../pages/TermsPage/PrivacyPage';
-import TosPage from '../pages/TermsPage/TosPage';
-import RegionPage from '../pages/RegionPage/RegionPage';
+import AboutPage from '@/pages/AboutPage/AboutPage';
+import PrivacyPage from '@/pages/TermsPage/PrivacyPage/PrivacyPage';
+import TosPage from '@/pages/TermsPage/TosPage/TosPage';
+import RegionPage from '@/pages/RegionPage/RegionPage';
 import SchoolPage from '@/pages/SchoolPage/SchoolPage';
 import MainPage from '@/pages/MainPage/MainPage';
 import MyPage from '@/pages/MyPage/MyPage';
+import LoadingPage from '@/pages/LoadingPage/LoadingPage';
+import MobileBannedPage from '@/pages/MobileBannedPage/MobileBannedPage';
 
 export const mainRoutes = {
 	path: '/',
@@ -46,6 +48,14 @@ export const mainRoutes = {
 		{
 			path: routes.tos,
 			element: <TosPage />,
+		},
+		{
+			path: routes.loadingPage,
+			element: <LoadingPage />,
+		},
+		{
+			path: routes.mobileBanned,
+			element: <MobileBannedPage />,
 		},
 	],
 };

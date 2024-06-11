@@ -90,7 +90,7 @@ export default function SchoolSettingPage() {
 					</p>
 				</div>
 				<button
-					className={`mb-2 mt-6 h-11 w-36 rounded bg-primary text-sm font-bold text-white ${
+					className={`mb-2 mt-6 h-11 w-36 rounded  bg-primary text-sm font-bold text-white hover:bg-blue-400 focus:bg-blue-700 ${
 						isEmailFormValid() ? '' : 'pointer-events-none opacity-50' // 모든 필드가 채워졌을 때 버튼 활성화
 					}`}>
 					<p className="">인증번호 전송</p>
@@ -103,7 +103,7 @@ export default function SchoolSettingPage() {
 					onChange={handleInputValueKey} // 값 변경 시 setKey 호출
 				/>
 				<button
-					className={`mt-6 h-11 w-36 rounded bg-primary text-sm font-bold text-white ${
+					className={`mt-6 h-11 w-36 rounded  bg-primary text-sm font-bold text-white hover:bg-blue-400 focus:bg-blue-700${
 						isAllFormValid() ? '' : 'pointer-events-none opacity-50' // 모든 필드가 채워졌을 때 버튼 활성화
 					}`}>
 					다음
