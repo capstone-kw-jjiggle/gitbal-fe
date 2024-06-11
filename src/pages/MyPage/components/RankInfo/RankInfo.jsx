@@ -22,7 +22,7 @@ export default function RankInfo({ userRankInfo, githubID }) {
 						className="relative h-full w-1/2 animate-dynamicWidth rounded-lg bg-primary">
 						<div className="absolute -top-10 right-0">
 							{/* 유저 현재 점수만 나와있고 다음 레벨까지의 몇퍼센트 남았는지 비율에 관련된 정보없음 */}
-							<SmallProfileImage imageURL={userRace[0].imgUrl} />
+							<SmallProfileImage />
 						</div>
 					</div>
 
