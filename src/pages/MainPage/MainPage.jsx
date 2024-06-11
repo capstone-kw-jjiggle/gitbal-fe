@@ -26,7 +26,6 @@ export default function MainPage() {
 	const { firstRegionName, firstSchoolName } = userWinnerData?.data || {};
 
 	const { data: userListData } = useGetUserList(page, currentKeyword);
-	console.log(userListData);
 	const userList = userListData ? userListData.data.userList : [];
 	const totalPages = userListData ? userListData.data.totalPages : 0;
 
