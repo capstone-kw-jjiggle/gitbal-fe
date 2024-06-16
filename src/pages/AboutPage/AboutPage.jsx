@@ -2,8 +2,10 @@ import { useRef } from 'react';
 
 import Divider from '@/components/Divider';
 import logo from '@/assets/images/userLevel/userLevel3.svg';
-import testImg from '@/assets/images/testImg/aboutTestImg.jpeg';
-import testImg2 from '@/assets/images/testImg/aboutTestImg2.jpeg';
+import testImg1 from '@/assets/images/testImg/aboutTestImg1.jpg';
+import testImg2 from '@/assets/images/testImg/aboutTestImg2.jpg';
+import testImg3 from '@/assets/images/testImg/aboutTestImg3.jpg';
+import testImg4 from '@/assets/images/testImg/aboutTestImg4.jpeg';
 import AboutPeopleCard from '@/pages/AboutPage/components/AboutPeopleCard';
 
 export default function AboutPage() {
@@ -85,14 +87,14 @@ export default function AboutPage() {
 							</div>
 						</div>
 						<div className=" w-2/5">
-							<img src={testImg} alt="testImg" className="rounded-xl shadow-xl" />
+							<img src={testImg1} alt="testImg" className="rounded-xl shadow-xl" />
 						</div>
 					</div>
 
 					{/* 단락2 */}
 					<div className=" mt-80 flex flex-row justify-between">
 						<div className=" w-2/5">
-							<img src={testImg} alt="testImg" className="rounded-xl shadow-xl" />
+							<img src={testImg2} alt="testImg" className="rounded-xl shadow-xl" />
 						</div>
 						<div className=" text-end">
 							<p className="mb-4 text-xl font-bold text-primary">랭킹 시스템 운영</p>
@@ -128,7 +130,7 @@ export default function AboutPage() {
 							</div>
 						</div>
 						<div className=" w-2/5">
-							<img src={testImg} alt="testImg" className="rounded-xl shadow-xl" />
+							<img src={testImg3} alt="testImg" className="rounded-xl shadow-xl" />
 						</div>
 					</div>
 				</div>
@@ -138,7 +140,7 @@ export default function AboutPage() {
 				<div>
 					<p className="mt-40 text-center text-xl font-bold text-primary">Our Team</p>
 					<p className="mt-4 text-center text-4xl font-bold">깃발의 개발자들을 소개 드립니다.</p>
-					<img src={testImg2} alt="testImg" className="mt-20 rounded-xl shadow-xl" />
+					<img src={testImg4} alt="testImg" className="mt-20 rounded-xl shadow-xl" />
 					<div className="mb-40 mt-10 flex flex-col">
 						<div className="my-8 flex flex-row">
 							<AboutPeopleCard

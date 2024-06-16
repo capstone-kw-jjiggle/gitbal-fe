@@ -1,7 +1,7 @@
 import logo from '@/assets/images/userLevel/userLevel3.svg';
 import openInNew from '@/assets/images/icon/open_in_new.svg';
 import { useState } from 'react';
-import testImg2 from '@/assets/images/testImg/aboutTestImg2.jpeg';
+import testImg4 from '@/assets/images/testImg/aboutTestImg4.jpeg';
 
 export default function AboutPeopleCard({ name, part, nickName, gitId, blaBla }) {
 	const CHANGE_COUNT = 5;
@@ -25,7 +25,7 @@ export default function AboutPeopleCard({ name, part, nickName, gitId, blaBla })
 			{clickCount >= CHANGE_COUNT ? (
 				<div className="w-full rounded-xl bg-white p-4 text-black19 shadow-xl">
 					<div className=" m-auto flex flex-row justify-between ">
-						<img src={testImg2} alt="testImg" className="rounded-xl shadow-xl" />
+						<img src={testImg4} alt="testImg" className="rounded-xl shadow-xl" />
 					</div>
 				</div>
 			) : (
