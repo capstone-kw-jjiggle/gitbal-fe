@@ -10,6 +10,7 @@ import useAuthStore from '@/stores/authStore';
 import { useGetUserInfo } from '@/api/auth/query';
 import { DomainInfoCard } from '@/components/Cards/DomainInfoCard';
 import getRegionImage from '@/utils/getRegionImage';
+import NotLogin from '@/components/NotLogin/NotLogin';
 
 export default function RegionPage() {
 	const { isLoggedIn } = useAuthStore();
@@ -50,7 +51,12 @@ export default function RegionPage() {
 							)}
 						</>
 					) : (
-						<div>로그인해주세요</div>
+						<div className="h-[258px] w-full">
+							<div className="flex w-1/2 flex-col">
+								<RankTitle title={'학교 랭킹'} daysLeft={'100'} />
+							</div>
+							<NotLogin />
+						</div>
 					)}
 				</div>
 				{regionWinnerData && <RegionWinnerCard regionWinner={regionWinner} />}

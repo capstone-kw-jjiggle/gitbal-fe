@@ -14,6 +14,7 @@ import useAuthStore from '@/stores/authStore';
 import { useGetUserInfo } from '@/api/auth/query';
 import { DomainInfoCard } from '@/components/Cards/DomainInfoCard';
 import getLevelImage from '@/utils/getLevelImage';
+import NotLogin from '@/components/NotLogin/NotLogin';
 
 export default function SchoolPage() {
 	const { isLoggedIn } = useAuthStore();
@@ -73,7 +74,12 @@ export default function SchoolPage() {
 							)}
 						</>
 					) : (
-						<div>로그인 해주세요</div>
+						<div className="h-[258px] w-full">
+							<div className="flex w-1/2 flex-col">
+								<RankTitle title={'학교 랭킹'} daysLeft={'100'} />
+							</div>
+							<NotLogin />
+						</div>
 					)}
 				</div>
 				{isLoading ? <div>로딩중</div> : <SchoolWinnerCard schoolWinnerInfo={schoolWinnerInfo} />}

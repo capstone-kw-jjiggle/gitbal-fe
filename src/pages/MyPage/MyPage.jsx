@@ -27,11 +27,13 @@ export default function MyPage() {
 
 	useEffect(() => {
 		if (isLoggedIn !== true) navigate(routes.auth.login);
+		console.log(isLoggedIn);
 	}, []);
 
 	const { data: userInfoData } = useGetUserInfo({ enabled: isLoggedIn });
 	const userInfo = userInfoData?.data || {};
 	const userName = userInfo?.userName || '';
+	const imageURL = userInfo?.imgUrl || '';
 
 	const userMyPageData = useGetUserMyPageData(userName);
 
@@ -45,7 +47,7 @@ export default function MyPage() {
 
 	const userRankInfo = { userScore, userSchoolRankArray, userRegionRankArray, userRace, userLanguage };
 
-	const isLoading = userMyPageData.some((query) => query.isLoading);
+	// const isLoading = userMyPageData.some((query) => query.isLoading);
 	const isPending = userMyPageData.some((query) => query.isPending);
 	const isError = userMyPageData.some((query) => query.isError);
 
@@ -74,7 +76,7 @@ export default function MyPage() {
 				{
 					<Funnel>
 						<Menu name={'RANK'}>
-							<RankInfo userRankInfo={userRankInfo} githubID={userName} />
+							<RankInfo userRankInfo={userRankInfo} githubID={userName} imageURL={imageURL} />
 						</Menu>
 						<Menu name={'칭호'}>
 							<TitleInfo />

@@ -24,7 +24,7 @@ export default function MobileBannedPage() {
 
 	return (
 		<>
-			<div className="my-auto flex h-max w-full flex-col place-items-center">
+			<div className="my-auto flex h-screen w-full flex-col place-items-center">
 				<div className=" my-auto">
 					<Lottie options={defaultOptions} height={210} width={300} isClickToPauseDisabled />
 					<p className="mt-2  text-center text-sm font-semibold text-primary">{texts[textIndex]}</p>

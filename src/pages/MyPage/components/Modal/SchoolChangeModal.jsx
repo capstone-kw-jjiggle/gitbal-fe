@@ -2,6 +2,7 @@ import MyDropdownSelect from '@/components/MyDropdownSelect';
 import SchoolChangeInput from '@/pages/MyPage/components/Modal/SchoolChangeInput';
 import { options } from '@/pages/auth/SchoolSettingPage/_data/mock';
 import { useState, useRef, useEffect } from 'react';
+import { useForm } from 'react-hook-form';
 
 const SchoolChangeModal = ({ setModalOpen }) => {
 	const mySchool = '광운대학교';
@@ -9,6 +10,8 @@ const SchoolChangeModal = ({ setModalOpen }) => {
 	const [school, setSchool] = useState('');
 	const [email, setEmail] = useState('');
 	const [key, setKey] = useState('');
+
+	const { control } = useForm();
 
 	function handleSelectValueSchool(event) {
 		setSchool(event.label); //event.value로 받아와도 됨
@@ -59,11 +62,7 @@ const SchoolChangeModal = ({ setModalOpen }) => {
 				<div className="flex flex-col justify-center rounded bg-white p-12 shadow-2xl">
 					<h1 className="mx-auto text-lg font-bold">현재 소속학교 == {mySchool}</h1>
 					<div className="mx-auto flex w-2/3 flex-col">
-						<MyDropdownSelect
-							placeholder={'클릭하세요'}
-							onSelectChange={handleSelectValueSchool}
-							optionsData={options}
-						/>
+						<MyDropdownSelect control={control} optionsData={options} />
 						<SchoolChangeInput
 							placeholder={'대학 이메일 입력'}
 							type={'email'}

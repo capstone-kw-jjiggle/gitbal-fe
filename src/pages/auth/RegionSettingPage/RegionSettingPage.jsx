@@ -4,6 +4,7 @@ import { useGetRegionNames, useUserJoin } from '@/api/auth/query';
 import { useForm } from 'react-hook-form';
 import 객체배열로변환하는함수 from '@/utils/convertArrayToObjectArray';
 import DropdownSelect from '@/components/DropdownSelect/DropdownSelect';
+import { routes } from '@/constants/routes';
 
 export default function RegionSettingPage() {
 	const navigate = useNavigate();
@@ -32,7 +33,7 @@ export default function RegionSettingPage() {
 			onSuccess: (data) => {
 				console.log(data);
 				alert('성공');
-				// navigate(routes.auth.loginCompletePage);
+				navigate(routes.auth.loginCompletePage);
 			},
 			onError: (e) => {
 				console.error(e);
