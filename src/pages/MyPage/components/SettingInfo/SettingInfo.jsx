@@ -47,7 +47,7 @@ export default function SettingInfo() {
 					<hr className="bg-red border-1 my-3 border-greyBD" />
 					<SettingItem
 						title={'소속지역 == 경기도'}
-						content={'변경버튼을 눌러 재인증을 통해 소속지역을 변경할 수 있습니다.'}
+						content={'변경 버튼을 눌러 소속지역을 변경할 수 있습니다.'}
 						SettingButton={<SettingButton title={'변경'} onClick={showRegionModal} />}
 					/>
 					<hr className="bg-red border-1 my-3 border-greyBD" />
@@ -56,20 +56,20 @@ export default function SettingInfo() {
 					<h1 className="mb-6 w-full text-xl font-extrabold">계정 정보</h1>
 					<SettingItem
 						title={'프로필 사진 변경'}
-						content={'변경버튼을 눌러 재인증을 통해 소속학교를 변경할 수 있습니다.'}
+						content={'변경 버튼을 눌러 GitBal 프로필 사진을 변경할 수 있습니다.'}
 						SettingButton={<SettingButton title={'변경'} />}
 					/>
 					<hr className="bg-red border-1 my-3 border-greyBD" />
 					<SettingItem
 						title={'서비스 로그아웃'}
-						content={'변경버튼을 눌러 재인증을 통해 소속학교를 변경할 수 있습니다.'}
+						content={'로그아웃 버튼을 눌러 서비스 로그아웃을 할 수 있습니다. 로그인 화면으로 이동합니다.'}
 						SettingButton={<SettingButton onClick={handleLogout} title={'로그아웃'} color={'bg-secondary'} />}
 					/>
 
 					<hr className="bg-red border-1 my-3 border-greyBD" />
 					<SettingItem
 						title={'서비스 탈퇴'}
-						content={'변경버튼을 눌러 재인증을 통해 소속학교를 변경할 수 있습니다.'}
+						content={'탈퇴 버튼을 눌러 서비스를 탈퇴할 수 있습니다. 모든 정보는 삭제 됩니다.'}
 						SettingButton={<SettingButton title={'탈퇴'} color={'bg-[#FF0000]'} />}
 					/>
 				</section>

@@ -97,7 +97,7 @@ export default function SchoolPage() {
 							<input
 								className="h-12 w-full rounded-lg border-2 border-greyD9 px-4 py-2 text-sm"
 								type="text"
-								placeholder="github ID"
+								placeholder="학교를 검색해주세요"
 								{...register('keyword')}
 							/>
 						</form>
