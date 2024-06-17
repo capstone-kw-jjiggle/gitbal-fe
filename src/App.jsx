@@ -6,10 +6,10 @@ function App() {
 	return (
 		<>
 			<BrowserView>
-				<Routes />
+				<MobileBannedPage />
 			</BrowserView>
 			<MobileView>
-				<MobileBannedPage />
+				<Routes />
 			</MobileView>
 		</>
 	);

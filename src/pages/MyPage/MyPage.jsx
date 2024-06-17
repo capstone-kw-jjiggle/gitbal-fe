@@ -27,7 +27,6 @@ export default function MyPage() {
 
 	useEffect(() => {
 		if (isLoggedIn !== true) navigate(routes.auth.login);
-		console.log(isLoggedIn);
 	}, []);
 
 	const { data: userInfoData } = useGetUserInfo({ enabled: isLoggedIn });

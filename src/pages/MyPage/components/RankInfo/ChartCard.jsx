@@ -12,7 +12,7 @@ export default function ChartCard({ title, name, rank, data }) {
 					<h2 className="text-5xl font-extrabold">{rank}등</h2>
 				</div>
 			</div>
-			<div className="flex h-60 w-7/12">
+			<div className="flex h-60 w-8/12">
 				<ScoreChart data={data} />
 			</div>
 		</div>

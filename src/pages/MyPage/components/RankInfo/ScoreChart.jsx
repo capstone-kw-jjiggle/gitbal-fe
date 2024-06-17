@@ -39,7 +39,7 @@ export default function ScoreChart({ data, isLanguage }) {
 				margin={{
 					top: 20,
 					right: 80,
-					left: 40,
+					left: 80,
 					bottom: 20,
 				}}>
 				<XAxis type="number" hide />

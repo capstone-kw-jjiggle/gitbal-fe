@@ -2,18 +2,32 @@ import SchoolChangeModal from '@/pages/MyPage/components/Modal/SchoolChangeModal
 import RegionChangeModal from '@/pages/MyPage/components/Modal/RegionChangeModal';
 import SettingButton from './SettingButton';
 import SettingItem from './SettingItem';
+import useAuthStore from '@/stores/authStore';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { routes } from '@/constants/routes';
+import { queryClient } from '@/api/queryClient';
 
 export default function SettingInfo() {
 	const [isSchoolModalOpen, setIsSchoolModalOpen] = useState(false);
 	const [isRegionModalOpen, setIsRegionModalOpen] = useState(false);
+	const { logout } = useAuthStore();
+	const navigate = useNavigate();
 
 	const showSchoolModal = () => {
 		setIsSchoolModalOpen(true);
 	};
+
 	const showRegionModal = () => {
 		setIsRegionModalOpen(true);
+	};
+
+	const handleLogout = () => {
+		localStorage.removeItem('accessToken');
+		logout();
+		alert('로그아웃 되었습니다.');
+		queryClient.invalidateQueries('userInfo');
 	};
 
 	return (
@@ -49,7 +63,7 @@ export default function SettingInfo() {
 					<SettingItem
 						title={'서비스 로그아웃'}
 						content={'변경버튼을 눌러 재인증을 통해 소속학교를 변경할 수 있습니다.'}
-						SettingButton={<SettingButton title={'로그아웃'} color={'bg-secondary'} />}
+						SettingButton={<SettingButton onClick={handleLogout} title={'로그아웃'} color={'bg-secondary'} />}
 					/>
 
 					<hr className="bg-red border-1 my-3 border-greyBD" />
