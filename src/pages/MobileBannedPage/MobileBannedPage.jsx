@@ -25,8 +25,8 @@ export default function MobileBannedPage() {
 	return (
 		<>
 			<div className=" flex h-screen w-full flex-col items-center justify-center">
-				<Lottie options={defaultOptions} height={210} width={300} isClickToPauseDisabled />
-				<p className="mt-2  text-center text-sm font-semibold text-primary">{texts[textIndex]}</p>
+				<Lottie options={defaultOptions} height={420} width={600} isClickToPauseDisabled />
+				<p className="mt-2  text-center text-4xl font-semibold text-primary">{texts[textIndex]}</p>
 			</div>
 		</>
 	);
